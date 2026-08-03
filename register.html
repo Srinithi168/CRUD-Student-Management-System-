@@ -1,93 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register | Student Management System</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Register | LearnHub</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
 
-<body>
+<body class="login-page">
 
-<div class="register-container">
+<div class="login-wrapper">
 
-    <div class="register-card">
+<div class="login-left">
 
-        <a href="login.html" class="register-btn-page">
-    Register
-</a>
+<h1>Start Learning Today 🚀</h1>
 
-        <div class="register-icon">
-            <i class="fa-solid fa-user-plus"></i>
-        </div>
+<p>
+Create your free LearnHub account and access premium courses, projects, and certificates.
+</p>
 
-        <h2>Create Account</h2>
-
-        <p class="subtitle">
-            Register to access the Student Management System
-        </p>
-
-        <form>
-
-    <div class="form-group">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" placeholder="Enter your full name">
-    </div>
-
-    <div class="form-group">
-        <label for="id">Student ID</label>
-        <input type="text" id="id" placeholder="Enter Student ID">
-    </div>
-
-    <div class="form-group">
-        <label for="dept">Department</label>
-        <input type="text" id="dept" placeholder="Enter Department">
-    </div>
-
-    <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="Enter your email">
-    </div>
-
-    <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" placeholder="Enter your phone number">
-    </div>
-
-    <div class="form-group">
-        <label for="pass">Password</label>
-        <input type="password" id="pass" placeholder="Create password">
-    </div>
-
-    <div class="form-group">
-        <label for="cpass">Confirm Password</label>
-        <input type="password" id="cpass" placeholder="Confirm password">
-    </div>
-
-    <a href="login.html" class="register-btn-page">Register</a>
-
-</form>
-
-        <div class="register-link">
-            Already have an account?
-            <a href="login.html">Login</a>
-        </div>
-
-    </div>
+<img src="images/register.png" alt="Register">
 
 </div>
 
+<div class="login-right">
+
+<div class="login-box">
+
+<h2>Create Account</h2>
+
+<p>Fill in your details below</p>
+
+<form>
+
+<div class="input-group">
+<label>Full Name</label>
+
+<div class="input-field">
+<i class="fa-solid fa-user"></i>
+<input type="text" placeholder="Enter your full name">
+</div>
+
+</div>
+
+<div class="input-group">
+<label>Email Address</label>
+
+<div class="input-field">
+<i class="fa-solid fa-envelope"></i>
+<input type="email" placeholder="Enter your email">
+</div>
+
+</div>
+
+<div class="input-group">
+<label>Password</label>
+
+<div class="input-field">
+<i class="fa-solid fa-lock"></i>
+<input type="password" placeholder="Create password">
+</div>
+
+</div>
+
+<div class="input-group">
+<label>Confirm Password</label>
+
+<div class="input-field">
+<i class="fa-solid fa-lock"></i>
+<input type="password" placeholder="Confirm password">
+</div>
+
+</div>
+
+<a href="dashboard.html" class="login-btn-main">
+Create Account
+</a>
+
+<p class="register-text">
+
+Already have an account?
+
+<a href="login.html">
+
+Login
+
+</a>
+
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+<script src="js/script.js"></script>
 </body>
+
 </html>

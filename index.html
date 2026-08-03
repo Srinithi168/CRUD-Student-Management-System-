@@ -3,175 +3,463 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD (Smart Student Management Portal)</title>
+    <title>LearnHub | Learn Without Limits</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
+<!-- ================= NAVBAR ================= -->
 
-    <nav>
+<header>
 
-        <div class="logo">
-            <h2>CRUD </h2>
-        </div>
+<nav class="navbar">
 
-        <ul>
+<div class="logo">
 
-            <li><a href="index.html">Home</a></li>
+<i class="fa-solid fa-graduation-cap"></i>
 
-            <li><a href="#features">Features</a></li>
+LearnHub
 
-            <li><a href="#about">About</a></li>
+</div>
 
-            <li><a href="login.html">Login</a></li>
+<ul class="nav-links">
 
-            <li><a href="register.html" class="register-btn">Register</a></li>
+<li><a href="index.html" class="active">Home</a></li>
 
-        </ul>
+<li><a href="courses.html">Courses</a></li>
 
-    </nav>
+<li><a href="dashboard.html">Dashboard</a></li>
 
-    <!-- Hero Section -->
+<li><a href="contact.html">Contact</a></li>
 
-    <section class="hero">
+</ul>
 
-        <div class="hero-content">
+<div class="nav-btn">
 
-            <h1> CRUD (Smart Student Management Portal)</h1>
+<a href="login.html" class="login-btn">Login</a>
 
-            <p>
-                A simple and efficient web application to manage
-                student records, attendance, academic performance,
-                and personal information securely.
-            </p>
+<a href="register.html" class="register-btn">Register</a>
 
-            <a href="login.html" class="btn">
-                Get Started
-            </a>
+</div>
 
-        </div>
+</nav>
 
-        <div class="hero-image">
+</header>
 
-            <img src="images/student.png" alt="Student">
+<!-- ================= HERO ================= -->
 
-        </div>
+<section class="hero">
 
-    </section>
+<div class="hero-text">
 
-    <!-- Features -->
+<span class="badge">
+🚀 India's Trusted Learning Platform
+</span>
 
-    <section id="features" class="features">
+<h1>
 
-        <h2>Our Features</h2>
+Upgrade Your Skills
 
-        <div class="feature-container">
+<br>
 
-            <div class="card">
+Build Your Career
 
-                <i class="fa-solid fa-user-graduate"></i>
+</h1>
 
-                <h3>Student Records</h3>
+<p>
 
-                <p>
-                    Add, edit and manage all student details.
-                </p>
+Master Web Development, Artificial Intelligence,
+Machine Learning, Python, Java, UI/UX,
+and Data Analytics with industry experts.
 
-            </div>
+</p>
 
-            <div class="card">
+<div class="hero-buttons">
 
-                <i class="fa-solid fa-calendar-check"></i>
+<a href="courses.html" class="primary-btn">
 
-                <h3>Attendance</h3>
+Explore Courses
 
-                <p>
-                    Maintain daily attendance efficiently.
-                </p>
+</a>
 
-            </div>
+<a href="register.html" class="secondary-btn">
 
-            <div class="card">
+Get Started
 
-                <i class="fa-solid fa-chart-column"></i>
+</a>
 
-                <h3>Performance</h3>
+</div>
 
-                <p>
-                    Monitor grades and academic progress.
-                </p>
+<div class="hero-stats">
 
-            </div>
+<div>
 
-            <div class="card">
+<h2>20K+</h2>
 
-                <i class="fa-solid fa-lock"></i>
+<p>Students</p>
 
-                <h3>Secure Login</h3>
+</div>
 
-                <p>
-                    Secure access for administrators.
-                </p>
+<div>
 
-            </div>
+<h2>150+</h2>
 
-        </div>
+<p>Courses</p>
 
-    </section>
+</div>
 
-    <!-- About -->
+<div>
 
-    <section id="about" class="about">
+<h2>50+</h2>
 
-        <h2>About Our System</h2>
+<p>Experts</p>
 
-        <p>
+</div>
 
-            The Student Management System helps educational institutions
-            maintain student information digitally. It reduces paperwork,
-            improves accuracy, and provides a simple interface for
-            managing student records.
+</div>
 
-        </p>
+</div>
 
-    </section>
+<div class="hero-image">
 
-    <!-- Footer -->
+<img src="images/hero.png" alt="Learning">
 
-    <footer>
+</div>
 
-        <h3>Student Management System</h3>
+</section>
 
-        <p>Designed for Full Stack Web Development Project</p>
+<!-- ================= SEARCH ================= -->
 
-        <div class="social-icons">
+<section class="search-section">
 
-            <i class="fa-brands fa-facebook"></i>
+<h2>Find Your Dream Course</h2>
 
-            <i class="fa-brands fa-instagram"></i>
+<div class="search-box">
 
-            <i class="fa-brands fa-linkedin"></i>
+<input type="text" placeholder="Search courses...">
 
-            <i class="fa-brands fa-github"></i>
+<button>
 
-        </div>
+<i class="fa-solid fa-search"></i>
 
-        <p>© 2026 Student Management System. All Rights Reserved.</p>
+Search
 
-    </footer>
+</button>
 
+</div>
+
+</section>
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="categories">
+
+<h2>Popular Categories</h2>
+
+<div class="category-grid">
+
+<div class="category-card">
+
+<i class="fa-solid fa-code"></i>
+
+<h3>Programming</h3>
+
+<p>35 Courses</p>
+
+</div>
+
+<div class="category-card">
+
+<i class="fa-solid fa-brain"></i>
+
+<h3>Artificial Intelligence</h3>
+
+<p>18 Courses</p>
+
+</div>
+
+<div class="category-card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>Data Analytics</h3>
+
+<p>22 Courses</p>
+
+</div>
+
+<div class="category-card">
+
+<i class="fa-solid fa-palette"></i>
+
+<h3>UI / UX</h3>
+
+<p>15 Courses</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURED COURSES ================= -->
+
+<section class="featured">
+
+<h2>Featured Courses</h2>
+
+<div class="course-grid">
+
+<div class="course-card">
+
+<img src="images/html.jpg">
+
+<div class="course-content">
+
+<span class="course-level">Beginner</span>
+
+<h3>HTML & CSS Masterclass</h3>
+
+<p>Learn responsive web development from scratch.</p>
+
+<div class="course-footer">
+
+<span>⭐ 4.9</span>
+
+<a href="course-details.html">
+
+View Course
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="course-card">
+
+<img src="images/python.jpg">
+
+<div class="course-content">
+
+<span class="course-level">Intermediate</span>
+
+<h3>Python Programming</h3>
+
+<p>Build real-world Python applications.</p>
+
+<div class="course-footer">
+
+<span>⭐ 4.8</span>
+
+<a href="course-details.html">
+
+View Course
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="course-card">
+
+<img src="images/ai.jpg">
+
+<div class="course-content">
+
+<span class="course-level">Advanced</span>
+
+<h3>Artificial Intelligence</h3>
+
+<p>Learn AI and Machine Learning from experts.</p>
+
+<div class="course-footer">
+
+<span>⭐ 5.0</span>
+
+<a href="course-details.html">
+
+View Course
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= WHY US ================= -->
+
+<section class="why-us">
+
+<h2>Why Choose LearnHub?</h2>
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<i class="fa-solid fa-user-graduate"></i>
+
+<h3>Expert Mentors</h3>
+
+<p>Learn from experienced professionals.</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-certificate"></i>
+
+<h3>Certificates</h3>
+
+<p>Industry-recognized certificates.</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-laptop-code"></i>
+
+<h3>Hands-on Projects</h3>
+
+<p>Build portfolio-ready projects.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+
+<section class="testimonials">
+
+<h2>Student Reviews</h2>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-card">
+
+<p>
+
+★★★★★
+
+</p>
+
+<p>
+
+"The AI course helped me get my first internship."
+
+</p>
+
+<h4>- Priya</h4>
+
+</div>
+
+<div class="testimonial-card">
+
+<p>
+
+★★★★★
+
+</p>
+
+<p>
+
+"Best learning platform with practical projects."
+
+</p>
+
+<h4>- Rahul</h4>
+
+</div>
+
+<div class="testimonial-card">
+
+<p>
+
+★★★★★
+
+</p>
+
+<p>
+
+"I improved my web development skills a lot."
+
+</p>
+
+<h4>- Arjun</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+<h2>Stay Updated</h2>
+
+<p>
+
+Subscribe to receive the latest courses and updates.
+
+</p>
+
+<div class="newsletter-box">
+
+<input type="email" placeholder="Enter your email">
+
+<button>
+
+Subscribe
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2>LearnHub</h2>
+
+<p>
+
+Learn • Build • Grow
+
+</p>
+
+<p>
+
+© 2026 LearnHub. All Rights Reserved.
+
+</p>
+
+</footer>
+<script src="js/script.js"></script>
 </body>
 </html>
