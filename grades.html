@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduTrack | Grades</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-small">E</div>
+            <h2>EduTrack</h2>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <p class="menu-title">MAIN</p>
+
+            <a href="dashboard.html" class="menu-item">
+                <span>🏠</span> Dashboard
+            </a>
+
+            <a href="courses.html" class="menu-item">
+                <span>📚</span> My Courses
+            </a>
+
+            <a href="assignments.html" class="menu-item">
+                <span>📝</span> Assignments
+            </a>
+
+            <a href="quizzes.html" class="menu-item">
+                <span>❓</span> Quizzes
+            </a>
+
+            <p class="menu-title">ACADEMICS</p>
+
+            <a href="attendance.html" class="menu-item">
+                <span>📅</span> Attendance
+            </a>
+
+            <a href="grades.html" class="menu-item active">
+                <span>📊</span> Grades
+            </a>
+
+            <p class="menu-title">OTHERS</p>
+
+            <a href="announcements.html" class="menu-item">
+                <span>📢</span> Announcements
+            </a>
+
+            <a href="profile.html" class="menu-item">
+                <span>👤</span> My Profile
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="menu-item">
+                <span>⚙️</span> Settings
+            </a>
+
+            <a href="index.html" class="menu-item logout">
+                <span>🚪</span> Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+                <h3>Grades & Performance</h3>
+                <p>Track your academic performance</p>
+            </div>
+
+            <div class="topbar-right">
+
+                <button class="notification">
+                    🔔
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="profile-mini">
+
+                    <div class="avatar">S</div>
+
+                    <div>
+                        <strong>Srinithi</strong>
+                        <small>Student</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- HEADER -->
+
+        <section class="page-intro">
+
+            <div>
+
+                <h1>Academic Performance</h1>
+
+                <p>
+                    View your grades, marks and semester performance.
+                </p>
+
+            </div>
+
+            <select class="semester-select">
+
+                <option>Semester 5</option>
+                <option>Semester 4</option>
+                <option>Semester 3</option>
+
+            </select>
+
+        </section>
+
+
+        <!-- PERFORMANCE SUMMARY -->
+
+        <section class="performance-summary">
+
+
+            <!-- CGPA -->
+
+            <div class="cgpa-card">
+
+                <div class="cgpa-circle">
+
+                    <div>
+
+                        <strong>8.4</strong>
+
+                        <span>CGPA</span>
+
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <h3>Excellent Performance</h3>
+
+                    <p>
+                        You're performing above your class average.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- AVERAGE -->
+
+            <div class="performance-stat">
+
+                <span>📈</span>
+
+                <div>
+
+                    <strong>82%</strong>
+
+                    <p>Overall Percentage</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CREDITS -->
+
+            <div class="performance-stat">
+
+                <span>🎓</span>
+
+                <div>
+
+                    <strong>22</strong>
+
+                    <p>Credits Completed</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RANK -->
+
+            <div class="performance-stat">
+
+                <span>🏆</span>
+
+                <div>
+
+                    <strong>08</strong>
+
+                    <p>Class Rank</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SUBJECT GRADES -->
+
+        <section class="dashboard-card grades-table-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>Semester 5 Results</h2>
+
+                    <p>
+                        Subject-wise marks and grades
+                    </p>
+
+                </div>
+
+                <span class="result-status">
+                    Result Published
+                </span>
+
+            </div>
+
+
+            <div class="grades-table-wrapper">
+
+                <table class="grades-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Subject</th>
+
+                            <th>Internal</th>
+
+                            <th>Assignment</th>
+
+                            <th>Exam</th>
+
+                            <th>Total</th>
+
+                            <th>Grade</th>
+
+                            <th>Performance</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+
+                        <!-- PYTHON -->
+
+                        <tr>
+
+                            <td>
+
+                                <div class="table-subject">
+
+                                    <div class="table-icon python-subject">
+                                        PY
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Python Programming
+                                        </strong>
+
+                                        <small>
+                                            4 Credits
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>24/25</td>
+
+                            <td>18/20</td>
+
+                            <td>42/50</td>
+
+                            <td><strong>84</strong></td>
+
+                            <td>
+                                <span class="grade-a">
+                                    A
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="mini-performance">
+
+                                    <div
+                                        class="mini-bar"
+                                        style="width:84%">
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- WEB -->
+
+                        <tr>
+
+                            <td>
+
+                                <div class="table-subject">
+
+                                    <div class="table-icon web-subject">
+                                        WD
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Web Development
+                                        </strong>
+
+                                        <small>
+                                            4 Credits
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>22/25</td>
+
+                            <td>19/20</td>
+
+                            <td>44/50</td>
+
+                            <td><strong>85</strong></td>
+
+                            <td>
+                                <span class="grade-a">
+                                    A
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="mini-performance">
+
+                                    <div
+                                        class="mini-bar"
+                                        style="width:85%">
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- DATABASE -->
+
+                        <tr>
+
+                            <td>
+
+                                <div class="table-subject">
+
+                                    <div class="table-icon db-subject">
+                                        DB
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Database Management
+                                        </strong>
+
+                                        <small>
+                                            4 Credits
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>21/25</td>
+
+                            <td>17/20</td>
+
+                            <td>39/50</td>
+
+                            <td><strong>77</strong></td>
+
+                            <td>
+                                <span class="grade-b">
+                                    B+
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="mini-performance">
+
+                                    <div
+                                        class="mini-bar"
+                                        style="width:77%">
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- AI -->
+
+                        <tr>
+
+                            <td>
+
+                                <div class="table-subject">
+
+                                    <div class="table-icon ai-subject">
+                                        AI
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Artificial Intelligence
+                                        </strong>
+
+                                        <small>
+                                            4 Credits
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>25/25</td>
+
+                            <td>19/20</td>
+
+                            <td>47/50</td>
+
+                            <td><strong>91</strong></td>
+
+                            <td>
+                                <span class="grade-a-plus">
+                                    A+
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="mini-performance">
+
+                                    <div
+                                        class="mini-bar"
+                                        style="width:91%">
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- MATHEMATICS -->
+
+                        <tr>
+
+                            <td>
+
+                                <div class="table-subject">
+
+                                    <div class="table-icon math-subject">
+                                        M
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Mathematics
+                                        </strong>
+
+                                        <small>
+                                            3 Credits
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>20/25</td>
+
+                            <td>15/20</td>
+
+                            <td>36/50</td>
+
+                            <td><strong>71</strong></td>
+
+                            <td>
+                                <span class="grade-b">
+                                    B
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <div class="mini-performance">
+
+                                    <div
+                                        class="mini-bar"
+                                        style="width:71%">
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOTTOM GRID -->
+
+        <section class="performance-bottom">
+
+
+            <!-- PERFORMANCE CHART -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>Semester Performance</h2>
+
+                        <p>
+                            Percentage across semesters
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="performance-chart">
+
+                    <div class="performance-y">
+
+                        <span>100</span>
+                        <span>80</span>
+                        <span>60</span>
+                        <span>40</span>
+                        <span>20</span>
+                        <span>0</span>
+
+                    </div>
+
+
+                    <div class="performance-bars">
+
+                        <div class="performance-column">
+
+                            <div
+                                class="performance-bar"
+                                style="height:70%">
+                            </div>
+
+                            <span>Sem 1</span>
+
+                        </div>
+
+                        <div class="performance-column">
+
+                            <div
+                                class="performance-bar"
+                                style="height:74%">
+                            </div>
+
+                            <span>Sem 2</span>
+
+                        </div>
+
+                        <div class="performance-column">
+
+                            <div
+                                class="performance-bar"
+                                style="height:78%">
+                            </div>
+
+                            <span>Sem 3</span>
+
+                        </div>
+
+                        <div class="performance-column">
+
+                            <div
+                                class="performance-bar"
+                                style="height:80%">
+                            </div>
+
+                            <span>Sem 4</span>
+
+                        </div>
+
+                        <div class="performance-column">
+
+                            <div
+                                class="performance-bar current"
+                                style="height:82%">
+                            </div>
+
+                            <span>Sem 5</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FEEDBACK -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>Instructor Feedback</h2>
+
+                        <p>
+                            Recent academic feedback
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feedback-card">
+
+                    <div class="feedback-avatar">
+                        A
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Dr. Arun Kumar
+                        </strong>
+
+                        <small>
+                            Python Programming
+                        </small>
+
+                        <p>
+                            "Excellent understanding of Python
+                            fundamentals. Continue working on
+                            advanced problem-solving."
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feedback-card">
+
+                    <div class="feedback-avatar">
+                        P
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Prof. Priya Sharma
+                        </strong>
+
+                        <small>
+                            Web Development
+                        </small>
+
+                        <p>
+                            "Good progress in frontend development.
+                            Your responsive design skills are improving."
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>

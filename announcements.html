@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduTrack | Announcements</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-small">E</div>
+            <h2>EduTrack</h2>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <p class="menu-title">MAIN</p>
+
+            <a href="dashboard.html" class="menu-item">
+                <span>🏠</span> Dashboard
+            </a>
+
+            <a href="courses.html" class="menu-item">
+                <span>📚</span> My Courses
+            </a>
+
+            <a href="assignments.html" class="menu-item">
+                <span>📝</span> Assignments
+            </a>
+
+            <a href="quizzes.html" class="menu-item">
+                <span>❓</span> Quizzes
+            </a>
+
+            <p class="menu-title">ACADEMICS</p>
+
+            <a href="attendance.html" class="menu-item">
+                <span>📅</span> Attendance
+            </a>
+
+            <a href="grades.html" class="menu-item">
+                <span>📊</span> Grades
+            </a>
+
+            <p class="menu-title">OTHERS</p>
+
+            <a href="announcements.html" class="menu-item active">
+                <span>📢</span> Announcements
+            </a>
+
+            <a href="profile.html" class="menu-item">
+                <span>👤</span> My Profile
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="menu-item">
+                <span>⚙️</span> Settings
+            </a>
+
+            <a href="index.html" class="menu-item logout">
+                <span>🚪</span> Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h3>Announcements</h3>
+
+                <p>
+                    Stay updated with the latest information
+                </p>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button class="notification">
+
+                    🔔
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="profile-mini">
+
+                    <div class="avatar">
+                        S
+                    </div>
+
+                    <div>
+
+                        <strong>Srinithi</strong>
+
+                        <small>Student</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- HEADER -->
+
+        <section class="page-intro">
+
+            <div>
+
+                <h1>Notifications Center</h1>
+
+                <p>
+                    Important updates and announcements from your college.
+                </p>
+
+            </div>
+
+            <button
+                class="mark-all-btn"
+                onclick="markAllRead()">
+
+                ✓ Mark All as Read
+
+            </button>
+
+        </section>
+
+
+        <!-- NOTIFICATION SUMMARY -->
+
+        <section class="notification-summary">
+
+            <div>
+
+                <span>📢</span>
+
+                <div>
+
+                    <strong>08</strong>
+
+                    <p>Total Announcements</p>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <span>🔴</span>
+
+                <div>
+
+                    <strong id="unreadCount">03</strong>
+
+                    <p>Unread</p>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <span>📅</span>
+
+                <div>
+
+                    <strong>02</strong>
+
+                    <p>Upcoming Events</p>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <span>⚠️</span>
+
+                <div>
+
+                    <strong>01</strong>
+
+                    <p>Important</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FILTER -->
+
+        <div class="announcement-controls">
+
+            <div class="announcement-tabs">
+
+                <button
+                    class="announcement-tab active"
+                    data-type="all">
+
+                    All
+
+                </button>
+
+                <button
+                    class="announcement-tab"
+                    data-type="unread">
+
+                    Unread
+
+                </button>
+
+                <button
+                    class="announcement-tab"
+                    data-type="academic">
+
+                    Academic
+
+                </button>
+
+                <button
+                    class="announcement-tab"
+                    data-type="event">
+
+                    Events
+
+                </button>
+
+            </div>
+
+
+            <div class="announcement-search">
+
+                🔍
+
+                <input
+                    type="text"
+                    id="announcementSearch"
+                    placeholder="Search announcements...">
+
+            </div>
+
+        </div>
+
+
+        <!-- ANNOUNCEMENTS -->
+
+        <section
+            class="announcement-list"
+            id="announcementList">
+
+
+            <!-- ANNOUNCEMENT 1 -->
+
+            <article
+                class="announcement-item unread"
+                data-type="academic">
+
+                <div class="announcement-large-icon exam-icon">
+                    📢
+                </div>
+
+                <div class="announcement-body">
+
+                    <div class="announcement-title">
+
+                        <div>
+
+                            <span class="announcement-type">
+                                IMPORTANT
+                            </span>
+
+                            <h3>
+                                Internal Examination Schedule
+                            </h3>
+
+                        </div>
+
+                        <span class="unread-dot"></span>
+
+                    </div>
+
+                    <p>
+                        The internal examinations will begin from
+                        September 10, 2026. Students are requested
+                        to check the examination timetable and
+                        prepare accordingly.
+                    </p>
+
+                    <div class="announcement-meta">
+
+                        <span>
+                            👤 Academic Office
+                        </span>
+
+                        <span>
+                            🕐 2 hours ago
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="read-btn"
+                    onclick="markRead(this)">
+
+                    Mark Read
+
+                </button>
+
+            </article>
+
+
+            <!-- ANNOUNCEMENT 2 -->
+
+            <article
+                class="announcement-item unread"
+                data-type="academic">
+
+                <div class="announcement-large-icon course-icon">
+                    📚
+                </div>
+
+                <div class="announcement-body">
+
+                    <div class="announcement-title">
+
+                        <div>
+
+                            <span class="announcement-type">
+                                COURSE UPDATE
+                            </span>
+
+                            <h3>
+                                New Web Development Materials
+                            </h3>
+
+                        </div>
+
+                        <span class="unread-dot"></span>
+
+                    </div>
+
+                    <p>
+                        New learning materials for Responsive Web
+                        Design have been uploaded to the course.
+                    </p>
+
+                    <div class="announcement-meta">
+
+                        <span>
+                            👤 Prof. Priya Sharma
+                        </span>
+
+                        <span>
+                            🕐 Yesterday
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="read-btn"
+                    onclick="markRead(this)">
+
+                    Mark Read
+
+                </button>
+
+            </article>
+
+
+            <!-- ANNOUNCEMENT 3 -->
+
+            <article
+                class="announcement-item unread"
+                data-type="event">
+
+                <div class="announcement-large-icon event-icon">
+                    🎓
+                </div>
+
+                <div class="announcement-body">
+
+                    <div class="announcement-title">
+
+                        <div>
+
+                            <span class="announcement-type">
+                                EVENT
+                            </span>
+
+                            <h3>
+                                Technical Symposium 2026
+                            </h3>
+
+                        </div>
+
+                        <span class="unread-dot"></span>
+
+                    </div>
+
+                    <p>
+                        The annual technical symposium will be held
+                        on September 18. Registration is now open.
+                    </p>
+
+                    <div class="announcement-meta">
+
+                        <span>
+                            👤 Student Affairs
+                        </span>
+
+                        <span>
+                            🕐 Aug 25, 2026
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="read-btn"
+                    onclick="markRead(this)">
+
+                    Mark Read
+
+                </button>
+
+            </article>
+
+
+            <!-- ANNOUNCEMENT 4 -->
+
+            <article
+                class="announcement-item"
+                data-type="academic">
+
+                <div class="announcement-large-icon assignment-icon-large">
+                    📝
+                </div>
+
+                <div class="announcement-body">
+
+                    <div class="announcement-title">
+
+                        <div>
+
+                            <span class="announcement-type">
+                                ASSIGNMENT
+                            </span>
+
+                            <h3>
+                                Python Assignment Deadline
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Reminder: Python Basics assignment submission
+                        deadline is August 30.
+                    </p>
+
+                    <div class="announcement-meta">
+
+                        <span>
+                            👤 Dr. Arun Kumar
+                        </span>
+
+                        <span>
+                            🕐 Aug 24, 2026
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <span class="read-label">
+                    ✓ Read
+                </span>
+
+            </article>
+
+
+            <!-- ANNOUNCEMENT 5 -->
+
+            <article
+                class="announcement-item"
+                data-type="event">
+
+                <div class="announcement-large-icon holiday-icon">
+                    📅
+                </div>
+
+                <div class="announcement-body">
+
+                    <div class="announcement-title">
+
+                        <div>
+
+                            <span class="announcement-type">
+                                CAMPUS
+                            </span>
+
+                            <h3>
+                                Independence Day Celebration
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Students are invited to participate in the
+                        Independence Day celebrations at the campus.
+                    </p>
+
+                    <div class="announcement-meta">
+
+                        <span>
+                            👤 Student Affairs
+                        </span>
+
+                        <span>
+                            🕐 Aug 12, 2026
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <span class="read-label">
+                    ✓ Read
+                </span>
+
+            </article>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script type="module" src="js/main.js"></script>
+
+</body>
+
+</html>

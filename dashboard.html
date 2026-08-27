@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduTrack | Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="logo-small">E</div>
+
+            <h2>EduTrack</h2>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <p class="menu-title">MAIN</p>
+
+            <a href="dashboard.html" class="menu-item active">
+                <span>🏠</span>
+                Dashboard
+            </a>
+
+            <a href="courses.html" class="menu-item">
+                <span>📚</span>
+                My Courses
+            </a>
+
+            <a href="assignments.html" class="menu-item">
+                <span>📝</span>
+                Assignments
+            </a>
+
+            <a href="quizzes.html" class="menu-item">
+                <span>❓</span>
+                Quizzes
+            </a>
+
+
+            <p class="menu-title">ACADEMICS</p>
+
+            <a href="attendance.html" class="menu-item">
+                <span>📅</span>
+                Attendance
+            </a>
+
+            <a href="grades.html" class="menu-item">
+                <span>📊</span>
+                Grades
+            </a>
+
+
+            <p class="menu-title">OTHERS</p>
+
+            <a href="announcements.html" class="menu-item">
+                <span>📢</span>
+                Announcements
+            </a>
+
+            <a href="profile.html" class="menu-item">
+                <span>👤</span>
+                My Profile
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="menu-item">
+                <span>⚙️</span>
+                Settings
+            </a>
+
+            <a href="index.html" class="menu-item logout">
+                <span>🚪</span>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h3>Student Dashboard</h3>
+
+                <p>Thursday, August 27, 2026</p>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button class="notification">
+                    🔔
+                    <span class="notification-dot"></span>
+                </button>
+
+
+                <div class="profile-mini">
+
+                    <div class="avatar">
+                        S
+                    </div>
+
+                    <div>
+                        <strong>Srinithi</strong>
+                        <small>Student</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= WELCOME ================= -->
+
+        <section class="welcome-card">
+
+            <div>
+
+                <p class="welcome-small">
+                    GOOD MORNING 👋
+                </p>
+
+                <h1>
+                    Welcome back, Srinithi!
+                </h1>
+
+                <p>
+                    Keep learning and stay on track with your goals.
+                </p>
+
+                <button class="primary-btn">
+                    Continue Learning →
+                </button>
+
+            </div>
+
+
+            <div class="welcome-icon">
+                🎓
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📚
+                </div>
+
+                <div>
+
+                    <p>Total Courses</p>
+
+                    <h2>04</h2>
+
+                    <span class="stat-positive">
+                        ↑ 2 this semester
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📈
+                </div>
+
+                <div>
+
+                    <p>Average Progress</p>
+
+                    <h2>68%</h2>
+
+                    <span class="stat-positive">
+                        ↑ 8% this month
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📅
+                </div>
+
+                <div>
+
+                    <p>Attendance</p>
+
+                    <h2>87%</h2>
+
+                    <span class="stat-positive">
+                        Good attendance
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🏆
+                </div>
+
+                <div>
+
+                    <p>Average Grade</p>
+
+                    <h2>82%</h2>
+
+                    <span class="stat-positive">
+                        Excellent
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTENT GRID ================= -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- MY COURSES -->
+
+            <div class="dashboard-card courses-section">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>Continue Learning</h2>
+
+                        <p>Your recently accessed courses</p>
+
+                    </div>
+
+                    <a href="courses.html">
+                        View All →
+                    </a>
+
+                </div>
+
+
+                <div class="course-list">
+
+
+                    <!-- COURSE 1 -->
+
+                    <div class="course-card">
+
+                        <div class="course-image python">
+                            PY
+                        </div>
+
+                        <div class="course-info">
+
+                            <span class="course-category">
+                                PROGRAMMING
+                            </span>
+
+                            <h3>
+                                Python Programming
+                            </h3>
+
+                            <p>
+                                Dr. Arun Kumar
+                            </p>
+
+
+                            <div class="progress-container">
+
+                                <div class="progress-info">
+
+                                    <span>75% Complete</span>
+
+                                    <span>6/8 Modules</span>
+
+                                </div>
+
+                                <div class="progress-bar">
+
+                                    <div
+                                        class="progress"
+                                        style="width:75%">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <button class="continue-btn">
+                                Continue →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- COURSE 2 -->
+
+                    <div class="course-card">
+
+                        <div class="course-image web">
+                            WD
+                        </div>
+
+                        <div class="course-info">
+
+                            <span class="course-category">
+                                DEVELOPMENT
+                            </span>
+
+                            <h3>
+                                Full Stack Web Development
+                            </h3>
+
+                            <p>
+                                Prof. Priya Sharma
+                            </p>
+
+
+                            <div class="progress-container">
+
+                                <div class="progress-info">
+
+                                    <span>50% Complete</span>
+
+                                    <span>5/10 Modules</span>
+
+                                </div>
+
+                                <div class="progress-bar">
+
+                                    <div
+                                        class="progress"
+                                        style="width:50%">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <button class="continue-btn">
+                                Continue →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT COLUMN -->
+
+            <div class="right-column">
+
+
+                <!-- ASSIGNMENTS -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>Upcoming</h2>
+
+                            <p>Assignments & quizzes</p>
+
+                        </div>
+
+                        <a href="assignments.html">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="upcoming-list">
+
+
+                        <div class="upcoming-item">
+
+                            <div class="upcoming-icon">
+                                📝
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Python Assignment
+                                </h4>
+
+                                <p>
+                                    Due Aug 30
+                                </p>
+
+                            </div>
+
+                            <span class="urgent">
+                                3 days
+                            </span>
+
+                        </div>
+
+
+                        <div class="upcoming-item">
+
+                            <div class="upcoming-icon">
+                                ❓
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    DBMS Quiz
+                                </h4>
+
+                                <p>
+                                    Due Sep 02
+                                </p>
+
+                            </div>
+
+                            <span>
+                                6 days
+                            </span>
+
+                        </div>
+
+
+                        <div class="upcoming-item">
+
+                            <div class="upcoming-icon">
+                                📝
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Web Development
+                                </h4>
+
+                                <p>
+                                    Due Sep 05
+                                </p>
+
+                            </div>
+
+                            <span>
+                                9 days
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ANNOUNCEMENTS -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>Announcements</h2>
+
+                        </div>
+
+                        <a href="announcements.html">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="announcement">
+
+                        <div class="announcement-icon">
+                            📢
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                Internal Exam Schedule
+                            </h4>
+
+                            <p>
+                                Internal examinations begin from September 10.
+                            </p>
+
+                            <small>
+                                2 hours ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="announcement">
+
+                        <div class="announcement-icon">
+                            🎓
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                New Course Material
+                            </h4>
+
+                            <p>
+                                New Web Development materials are available.
+                            </p>
+
+                            <small>
+                                Yesterday
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>

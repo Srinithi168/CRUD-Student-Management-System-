@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduTrack | My Profile</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="logo-small">E</div>
+
+            <h2>EduTrack</h2>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <p class="menu-title">MAIN</p>
+
+            <a href="dashboard.html" class="menu-item">
+                <span>🏠</span>
+                Dashboard
+            </a>
+
+            <a href="courses.html" class="menu-item">
+                <span>📚</span>
+                My Courses
+            </a>
+
+            <a href="assignments.html" class="menu-item">
+                <span>📝</span>
+                Assignments
+            </a>
+
+            <a href="quizzes.html" class="menu-item">
+                <span>❓</span>
+                Quizzes
+            </a>
+
+
+            <p class="menu-title">ACADEMICS</p>
+
+            <a href="attendance.html" class="menu-item">
+                <span>📅</span>
+                Attendance
+            </a>
+
+            <a href="grades.html" class="menu-item">
+                <span>📊</span>
+                Grades
+            </a>
+
+
+            <p class="menu-title">OTHERS</p>
+
+            <a href="announcements.html" class="menu-item">
+                <span>📢</span>
+                Announcements
+            </a>
+
+            <a href="profile.html" class="menu-item active">
+                <span>👤</span>
+                My Profile
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="menu-item">
+                <span>⚙️</span>
+                Settings
+            </a>
+
+            <a href="index.html" class="menu-item logout">
+                <span>🚪</span>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h3>My Profile</h3>
+
+                <p>
+                    Manage your personal and academic information
+                </p>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button class="notification">
+
+                    🔔
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="profile-mini">
+
+                    <div class="avatar">
+                        S
+                    </div>
+
+                    <div>
+
+                        <strong>Srinithi</strong>
+
+                        <small>Student</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PROFILE HERO ================= -->
+
+        <section class="profile-hero">
+
+            <div class="profile-main-info">
+
+                <div class="large-avatar">
+
+                    S
+
+                    <button
+                        class="avatar-edit"
+                        onclick="changeProfilePhoto()">
+
+                        📷
+
+                    </button>
+
+                </div>
+
+
+                <div>
+
+                    <h1>Srinithi Anand</h1>
+
+                    <p>
+                        BCA • Computer Applications
+                    </p>
+
+                    <span>
+                        🎓 Student ID: ET2026BCA108
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="edit-profile-btn"
+                onclick="enableProfileEdit()">
+
+                ✏️ Edit Profile
+
+            </button>
+
+        </section>
+
+
+        <!-- ================= PROFILE GRID ================= -->
+
+        <section class="profile-grid">
+
+
+            <!-- PERSONAL INFORMATION -->
+
+            <div class="dashboard-card profile-info-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>Personal Information</h2>
+
+                        <p>
+                            Your basic personal details
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-details">
+
+
+                    <div class="profile-detail">
+
+                        <span>👤</span>
+
+                        <div>
+
+                            <small>Full Name</small>
+
+                            <strong>
+                                Srinithi Anand
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-detail">
+
+                        <span>📧</span>
+
+                        <div>
+
+                            <small>Email Address</small>
+
+                            <strong>
+                                srinithi@example.com
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-detail">
+
+                        <span>📱</span>
+
+                        <div>
+
+                            <small>Phone Number</small>
+
+                            <strong>
+                                +91 XXXXX XXXXX
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-detail">
+
+                        <span>📍</span>
+
+                        <div>
+
+                            <small>Location</small>
+
+                            <strong>
+                                Coimbatore, Tamil Nadu
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-detail">
+
+                        <span>🎂</span>
+
+                        <div>
+
+                            <small>Date of Birth</small>
+
+                            <strong>
+                                15 June 2005
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-detail">
+
+                        <span>🌐</span>
+
+                        <div>
+
+                            <small>Languages</small>
+
+                            <strong>
+                                English, Tamil
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACADEMIC INFORMATION -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>Academic Information</h2>
+
+                        <p>
+                            Current academic details
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="academic-details">
+
+
+                    <div>
+
+                        <small>Degree</small>
+
+                        <strong>
+                            Bachelor of Computer Applications
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <small>Department</small>
+
+                        <strong>
+                            Computer Applications
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <small>Current Semester</small>
+
+                        <strong>
+                            Semester 5
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <small>Academic Year</small>
+
+                        <strong>
+                            2026 - 2027
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <small>Faculty Advisor</small>
+
+                        <strong>
+                            Dr. Meena Krishnan
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <small>Current CGPA</small>
+
+                        <strong class="cgpa-highlight">
+                            8.4 / 10
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ================= LOWER GRID ================= -->
+
+        <section class="profile-lower-grid">
+
+
+            <!-- SKILLS -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>Skills</h2>
+
+                        <p>
+                            Technical skills you're learning
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="add-skill-btn"
+                        onclick="addSkill()">
+
+                        + Add
+
+                    </button>
+
+                </div>
+
+
+                <div class="skills-list">
+
+                    <span>HTML</span>
+
+                    <span>CSS</span>
+
+                    <span>Java</span>
+
+                    <span>Python</span>
+
+                    <span>SQL</span>
+
+                    <span>JavaScript</span>
+
+                    <span>Git</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACHIEVEMENTS -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>Achievements</h2>
+
+                        <p>
+                            Your recent accomplishments
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="achievement-item">
+
+                    <div class="achievement-icon">
+                        🏆
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Academic Excellence
+                        </strong>
+
+                        <small>
+                            Scored above 80% in Semester 4
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="achievement-item">
+
+                    <div class="achievement-icon">
+                        💻
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Coding Challenge
+                        </strong>
+
+                        <small>
+                            Completed 50 programming problems
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="achievement-item">
+
+                    <div class="achievement-icon">
+                        🎓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Course Completion
+                        </strong>
+
+                        <small>
+                            Completed Python Fundamentals
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ================= ENROLLED COURSES ================= -->
+
+        <section class="dashboard-card enrolled-profile-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>Enrolled Courses</h2>
+
+                    <p>
+                        Courses you're currently studying
+                    </p>
+
+                </div>
+
+                <a href="courses.html">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div class="profile-course-list">
+
+
+                <div class="profile-course">
+
+                    <div class="profile-course-icon python-subject">
+                        PY
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Python Programming
+                        </strong>
+
+                        <small>
+                            75% completed
+                        </small>
+
+                    </div>
+
+                    <div class="profile-course-progress">
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress"
+                                style="width:75%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <span>
+                        75%
+                    </span>
+
+                </div>
+
+
+                <div class="profile-course">
+
+                    <div class="profile-course-icon web-subject">
+                        WD
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Web Development
+                        </strong>
+
+                        <small>
+                            68% completed
+                        </small>
+
+                    </div>
+
+                    <div class="profile-course-progress">
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress"
+                                style="width:68%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <span>
+                        68%
+                    </span>
+
+                </div>
+
+
+                <div class="profile-course">
+
+                    <div class="profile-course-icon db-subject">
+                        DB
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Database Management
+                        </strong>
+
+                        <small>
+                            82% completed
+                        </small>
+
+                    </div>
+
+                    <div class="profile-course-progress">
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress"
+                                style="width:82%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <span>
+                        82%
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script type="module" src="js/main.js"></script>
+
+</body>
+
+</html>

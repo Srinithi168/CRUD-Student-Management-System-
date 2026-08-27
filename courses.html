@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTrack | My Courses</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-small">E</div>
+            <h2>EduTrack</h2>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <p class="menu-title">MAIN</p>
+
+            <a href="dashboard.html" class="menu-item">
+                <span>🏠</span> Dashboard
+            </a>
+
+            <a href="courses.html" class="menu-item active">
+                <span>📚</span> My Courses
+            </a>
+
+            <a href="assignments.html" class="menu-item">
+                <span>📝</span> Assignments
+            </a>
+
+            <a href="quizzes.html" class="menu-item">
+                <span>❓</span> Quizzes
+            </a>
+
+            <p class="menu-title">ACADEMICS</p>
+
+            <a href="attendance.html" class="menu-item">
+                <span>📅</span> Attendance
+            </a>
+
+            <a href="grades.html" class="menu-item">
+                <span>📊</span> Grades
+            </a>
+
+            <p class="menu-title">OTHERS</p>
+
+            <a href="announcements.html" class="menu-item">
+                <span>📢</span> Announcements
+            </a>
+
+            <a href="profile.html" class="menu-item">
+                <span>👤</span> My Profile
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="menu-item">
+                <span>⚙️</span> Settings
+            </a>
+
+            <a href="index.html" class="menu-item logout">
+                <span>🚪</span> Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div>
+                <h3>My Courses</h3>
+                <p>Explore and continue your learning journey</p>
+            </div>
+
+            <div class="topbar-right">
+
+                <button class="notification">
+                    🔔
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="profile-mini">
+
+                    <div class="avatar">S</div>
+
+                    <div>
+                        <strong>Srinithi</strong>
+                        <small>Student</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE INTRO -->
+        <section class="page-intro">
+
+            <div>
+                <h1>My Learning</h1>
+
+                <p>
+                    Manage your courses and continue where you left off.
+                </p>
+            </div>
+
+            <button class="primary-btn">
+                + Explore Courses
+            </button>
+
+        </section>
+
+
+        <!-- SEARCH + FILTER -->
+        <section class="course-controls">
+
+            <div class="course-search">
+
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="courseSearch"
+                    placeholder="Search your courses..."
+                >
+
+            </div>
+
+
+            <div class="course-filters">
+
+                <button class="filter-btn active">
+                    All Courses
+                </button>
+
+                <button class="filter-btn">
+                    In Progress
+                </button>
+
+                <button class="filter-btn">
+                    Completed
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- COURSE STATISTICS -->
+        <section class="course-stats">
+
+            <div>
+                <span>📚</span>
+                <div>
+                    <strong>4</strong>
+                    <p>Total Courses</p>
+                </div>
+            </div>
+
+            <div>
+                <span>▶️</span>
+                <div>
+                    <strong>3</strong>
+                    <p>In Progress</p>
+                </div>
+            </div>
+
+            <div>
+                <span>✅</span>
+                <div>
+                    <strong>1</strong>
+                    <p>Completed</p>
+                </div>
+            </div>
+
+            <div>
+                <span>⏱️</span>
+                <div>
+                    <strong>42h</strong>
+                    <p>Learning Time</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- COURSES -->
+        <section>
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Your Courses</h2>
+                    <p>Courses you are currently enrolled in</p>
+                </div>
+
+                <span>4 Courses</span>
+
+            </div>
+
+
+            <div class="course-grid" id="courseGrid">
+
+
+                <!-- COURSE 1 -->
+
+                <article class="learning-card">
+
+                    <div class="learning-image python-bg">
+
+                        <span>PY</span>
+
+                        <small>PROGRAMMING</small>
+
+                    </div>
+
+                    <div class="learning-content">
+
+                        <span class="course-tag">
+                            PROGRAMMING
+                        </span>
+
+                        <h3>Python Programming</h3>
+
+                        <p class="instructor">
+                            👨‍🏫 Dr. Arun Kumar
+                        </p>
+
+                        <div class="course-meta">
+
+                            <span>📖 8 Modules</span>
+                            <span>⏱️ 12 Hours</span>
+
+                        </div>
+
+
+                        <div class="learning-progress">
+
+                            <div class="progress-info">
+
+                                <span>75% Complete</span>
+                                <span>6/8</span>
+
+                            </div>
+
+                            <div class="progress-bar">
+
+                                <div
+                                    class="progress"
+                                    style="width:75%">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="course-details.html"
+                            class="course-action">
+
+                            Continue Learning →
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- COURSE 2 -->
+
+                <article class="learning-card">
+
+                    <div class="learning-image web-bg">
+
+                        <span>WEB</span>
+
+                        <small>DEVELOPMENT</small>
+
+                    </div>
+
+                    <div class="learning-content">
+
+                        <span class="course-tag">
+                            DEVELOPMENT
+                        </span>
+
+                        <h3>Full Stack Web Development</h3>
+
+                        <p class="instructor">
+                            👩‍🏫 Prof. Priya Sharma
+                        </p>
+
+                        <div class="course-meta">
+
+                            <span>📖 10 Modules</span>
+                            <span>⏱️ 20 Hours</span>
+
+                        </div>
+
+
+                        <div class="learning-progress">
+
+                            <div class="progress-info">
+
+                                <span>50% Complete</span>
+                                <span>5/10</span>
+
+                            </div>
+
+                            <div class="progress-bar">
+
+                                <div
+                                    class="progress"
+                                    style="width:50%">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="course-details.html"
+                            class="course-action">
+
+                            Continue Learning →
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- COURSE 3 -->
+
+                <article class="learning-card">
+
+                    <div class="learning-image database-bg">
+
+                        <span>DB</span>
+
+                        <small>DATABASE</small>
+
+                    </div>
+
+                    <div class="learning-content">
+
+                        <span class="course-tag">
+                            DATABASE
+                        </span>
+
+                        <h3>Database Management Systems</h3>
+
+                        <p class="instructor">
+                            👨‍🏫 Prof. Karthik Raj
+                        </p>
+
+                        <div class="course-meta">
+
+                            <span>📖 9 Modules</span>
+                            <span>⏱️ 15 Hours</span>
+
+                        </div>
+
+
+                        <div class="learning-progress">
+
+                            <div class="progress-info">
+
+                                <span>60% Complete</span>
+                                <span>5/9</span>
+
+                            </div>
+
+                            <div class="progress-bar">
+
+                                <div
+                                    class="progress"
+                                    style="width:60%">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="course-details.html"
+                            class="course-action">
+
+                            Continue Learning →
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- COURSE 4 -->
+
+                <article class="learning-card completed-course">
+
+                    <div class="learning-image ai-bg">
+
+                        <span>AI</span>
+                        <small>ARTIFICIAL INTELLIGENCE</small>
+
+                    </div>
+
+                    <div class="learning-content">
+
+                        <span class="course-tag">
+                            ARTIFICIAL INTELLIGENCE
+                        </span>
+
+                        <h3>Introduction to Artificial Intelligence</h3>
+
+                        <p class="instructor">
+                            👩‍🏫 Dr. Meena Krishnan
+                        </p>
+
+                        <div class="course-meta">
+
+                            <span>📖 6 Modules</span>
+                            <span>⏱️ 10 Hours</span>
+
+                        </div>
+
+
+                        <div class="learning-progress">
+
+                            <div class="progress-info">
+
+                                <span>100% Complete</span>
+                                <span>6/6</span>
+
+                            </div>
+
+                            <div class="progress-bar">
+
+                                <div
+                                    class="progress completed"
+                                    style="width:100%">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="course-details.html"
+                            class="course-action completed-action">
+
+                            ✓ Course Completed
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

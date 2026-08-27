@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduTrack | Assignments</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-small">E</div>
+            <h2>EduTrack</h2>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <p class="menu-title">MAIN</p>
+
+            <a href="dashboard.html" class="menu-item">
+                <span>🏠</span> Dashboard
+            </a>
+
+            <a href="courses.html" class="menu-item">
+                <span>📚</span> My Courses
+            </a>
+
+            <a href="assignments.html" class="menu-item active">
+                <span>📝</span> Assignments
+            </a>
+
+            <a href="quizzes.html" class="menu-item">
+                <span>❓</span> Quizzes
+            </a>
+
+            <p class="menu-title">ACADEMICS</p>
+
+            <a href="attendance.html" class="menu-item">
+                <span>📅</span> Attendance
+            </a>
+
+            <a href="grades.html" class="menu-item">
+                <span>📊</span> Grades
+            </a>
+
+            <p class="menu-title">OTHERS</p>
+
+            <a href="announcements.html" class="menu-item">
+                <span>📢</span> Announcements
+            </a>
+
+            <a href="profile.html" class="menu-item">
+                <span>👤</span> My Profile
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="menu-item">
+                <span>⚙️</span> Settings
+            </a>
+
+            <a href="index.html" class="menu-item logout">
+                <span>🚪</span> Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div>
+                <h3>Assignments</h3>
+                <p>Manage your academic assignments</p>
+            </div>
+
+            <div class="topbar-right">
+
+                <button class="notification">
+                    🔔
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="profile-mini">
+
+                    <div class="avatar">S</div>
+
+                    <div>
+                        <strong>Srinithi</strong>
+                        <small>Student</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE HEADER -->
+        <section class="page-intro">
+
+            <div>
+                <h1>Assignments</h1>
+
+                <p>
+                    Stay organized and submit your work on time.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- ASSIGNMENT STATS -->
+        <section class="assignment-stats">
+
+            <div class="assignment-stat">
+                <span>📋</span>
+                <div>
+                    <strong>08</strong>
+                    <p>Total Assignments</p>
+                </div>
+            </div>
+
+            <div class="assignment-stat">
+                <span>⏳</span>
+                <div>
+                    <strong>03</strong>
+                    <p>Pending</p>
+                </div>
+            </div>
+
+            <div class="assignment-stat">
+                <span>✅</span>
+                <div>
+                    <strong>04</strong>
+                    <p>Submitted</p>
+                </div>
+            </div>
+
+            <div class="assignment-stat">
+                <span>🏆</span>
+                <div>
+                    <strong>82%</strong>
+                    <p>Average Score</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- FILTERS -->
+        <section class="assignment-controls">
+
+            <div class="assignment-tabs">
+
+                <button class="assignment-tab active"
+                        data-filter="all">
+                    All
+                </button>
+
+                <button class="assignment-tab"
+                        data-filter="pending">
+                    Pending
+                </button>
+
+                <button class="assignment-tab"
+                        data-filter="submitted">
+                    Submitted
+                </button>
+
+                <button class="assignment-tab"
+                        data-filter="graded">
+                    Graded
+                </button>
+
+            </div>
+
+
+            <div class="assignment-search">
+
+                🔍
+
+                <input
+                    type="text"
+                    id="assignmentSearch"
+                    placeholder="Search assignments..."
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- ASSIGNMENT LIST -->
+        <section class="assignment-list"
+                 id="assignmentList">
+
+
+            <!-- ASSIGNMENT 1 -->
+
+            <article class="assignment-card"
+                     data-status="pending">
+
+                <div class="assignment-icon python-assignment">
+                    PY
+                </div>
+
+                <div class="assignment-main">
+
+                    <div class="assignment-title">
+
+                        <div>
+
+                            <span class="course-tag">
+                                PYTHON PROGRAMMING
+                            </span>
+
+                            <h3>
+                                Python Basics & Variables
+                            </h3>
+
+                        </div>
+
+                        <span class="status pending">
+                            Pending
+                        </span>
+
+                    </div>
+
+
+                    <p class="assignment-description">
+                        Write programs demonstrating variables,
+                        data types and basic operators in Python.
+                    </p>
+
+
+                    <div class="assignment-details">
+
+                        <span>
+                            👨‍🏫 Dr. Arun Kumar
+                        </span>
+
+                        <span>
+                            📅 Due Aug 30, 2026
+                        </span>
+
+                        <span class="deadline">
+                            ⏰ 3 days left
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="assignment-action">
+
+                    <button class="submit-btn"
+                            onclick="openSubmission('Python Basics & Variables')">
+
+                        Submit Assignment
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- ASSIGNMENT 2 -->
+
+            <article class="assignment-card"
+                     data-status="pending">
+
+                <div class="assignment-icon database-assignment">
+                    DB
+                </div>
+
+                <div class="assignment-main">
+
+                    <div class="assignment-title">
+
+                        <div>
+
+                            <span class="course-tag">
+                                DATABASE
+                            </span>
+
+                            <h3>
+                                SQL Query Practice
+                            </h3>
+
+                        </div>
+
+                        <span class="status pending">
+                            Pending
+                        </span>
+
+                    </div>
+
+                    <p class="assignment-description">
+                        Create SQL queries using SELECT, JOIN,
+                        GROUP BY and aggregate functions.
+                    </p>
+
+                    <div class="assignment-details">
+
+                        <span>
+                            👨‍🏫 Prof. Karthik Raj
+                        </span>
+
+                        <span>
+                            📅 Due Sep 02, 2026
+                        </span>
+
+                        <span class="deadline">
+                            ⏰ 6 days left
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="assignment-action">
+
+                    <button class="submit-btn"
+                            onclick="openSubmission('SQL Query Practice')">
+
+                        Submit Assignment
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- ASSIGNMENT 3 -->
+
+            <article class="assignment-card"
+                     data-status="submitted">
+
+                <div class="assignment-icon web-assignment">
+                    WD
+                </div>
+
+                <div class="assignment-main">
+
+                    <div class="assignment-title">
+
+                        <div>
+
+                            <span class="course-tag">
+                                WEB DEVELOPMENT
+                            </span>
+
+                            <h3>
+                                Responsive Portfolio Website
+                            </h3>
+
+                        </div>
+
+                        <span class="status submitted">
+                            Submitted
+                        </span>
+
+                    </div>
+
+                    <p class="assignment-description">
+                        Build a responsive personal portfolio
+                        using HTML and CSS.
+                    </p>
+
+                    <div class="assignment-details">
+
+                        <span>
+                            👩‍🏫 Prof. Priya Sharma
+                        </span>
+
+                        <span>
+                            📅 Submitted Aug 25, 2026
+                        </span>
+
+                        <span>
+                            📎 portfolio.zip
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="assignment-action">
+
+                    <button class="view-btn">
+                        View Submission
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- ASSIGNMENT 4 -->
+
+            <article class="assignment-card"
+                     data-status="graded">
+
+                <div class="assignment-icon ai-assignment">
+                    AI
+                </div>
+
+                <div class="assignment-main">
+
+                    <div class="assignment-title">
+
+                        <div>
+
+                            <span class="course-tag">
+                                ARTIFICIAL INTELLIGENCE
+                            </span>
+
+                            <h3>
+                                AI Applications Report
+                            </h3>
+
+                        </div>
+
+                        <span class="status graded">
+                            Graded
+                        </span>
+
+                    </div>
+
+                    <p class="assignment-description">
+                        Prepare a report explaining real-world
+                        applications of artificial intelligence.
+                    </p>
+
+                    <div class="assignment-details">
+
+                        <span>
+                            👩‍🏫 Dr. Meena Krishnan
+                        </span>
+
+                        <span>
+                            📅 Submitted Aug 20, 2026
+                        </span>
+
+                        <span class="score">
+                            ⭐ 18 / 20
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="assignment-action">
+
+                    <button class="view-btn">
+                        View Feedback
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- SUBMISSION MODAL -->
+
+<div class="modal-overlay" id="submissionModal">
+
+    <div class="submission-modal">
+
+        <button class="modal-close"
+                onclick="closeSubmission()">
+            ×
+        </button>
+
+        <h2>Submit Assignment</h2>
+
+        <p id="selectedAssignment">
+            Assignment
+        </p>
+
+
+        <label>
+            Upload your file
+        </label>
+
+        <div class="upload-area">
+
+            <span>📎</span>
+
+            <h4>
+                Choose a file
+            </h4>
+
+            <p>
+                PDF, DOCX, ZIP up to 10MB
+            </p>
+
+            <input type="file"
+                   id="assignmentFile">
+
+        </div>
+
+
+        <label>
+            Comments
+        </label>
+
+        <textarea
+            placeholder="Add a comment for your instructor...">
+        </textarea>
+
+
+        <button class="submit-assignment-btn"
+                onclick="submitAssignment()">
+
+            Submit Assignment
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>

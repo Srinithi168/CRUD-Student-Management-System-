@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduTrack | Quizzes</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-small">E</div>
+            <h2>EduTrack</h2>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <p class="menu-title">MAIN</p>
+
+            <a href="dashboard.html" class="menu-item">
+                <span>🏠</span> Dashboard
+            </a>
+
+            <a href="courses.html" class="menu-item">
+                <span>📚</span> My Courses
+            </a>
+
+            <a href="assignments.html" class="menu-item">
+                <span>📝</span> Assignments
+            </a>
+
+            <a href="quizzes.html" class="menu-item active">
+                <span>❓</span> Quizzes
+            </a>
+
+            <p class="menu-title">ACADEMICS</p>
+
+            <a href="attendance.html" class="menu-item">
+                <span>📅</span> Attendance
+            </a>
+
+            <a href="grades.html" class="menu-item">
+                <span>📊</span> Grades
+            </a>
+
+            <p class="menu-title">OTHERS</p>
+
+            <a href="announcements.html" class="menu-item">
+                <span>📢</span> Announcements
+            </a>
+
+            <a href="profile.html" class="menu-item">
+                <span>👤</span> My Profile
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="menu-item">
+                <span>⚙️</span> Settings
+            </a>
+
+            <a href="index.html" class="menu-item logout">
+                <span>🚪</span> Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h3>Quizzes</h3>
+                <p>Test your knowledge and track your progress</p>
+            </div>
+
+            <div class="topbar-right">
+
+                <button class="notification">
+                    🔔
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="profile-mini">
+
+                    <div class="avatar">S</div>
+
+                    <div>
+                        <strong>Srinithi</strong>
+                        <small>Student</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE HEADER -->
+
+        <section class="page-intro">
+
+            <div>
+
+                <h1>Knowledge Check</h1>
+
+                <p>
+                    Complete quizzes to test what you've learned.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUIZ STATS -->
+
+        <section class="quiz-stats">
+
+            <div class="quiz-stat">
+                <span>❓</span>
+
+                <div>
+                    <strong>06</strong>
+                    <p>Total Quizzes</p>
+                </div>
+            </div>
+
+            <div class="quiz-stat">
+                <span>✅</span>
+
+                <div>
+                    <strong>04</strong>
+                    <p>Completed</p>
+                </div>
+            </div>
+
+            <div class="quiz-stat">
+                <span>⏳</span>
+
+                <div>
+                    <strong>02</strong>
+                    <p>Pending</p>
+                </div>
+            </div>
+
+            <div class="quiz-stat">
+                <span>🏆</span>
+
+                <div>
+                    <strong>84%</strong>
+                    <p>Average Score</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- AVAILABLE QUIZZES -->
+
+        <section>
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Available Quizzes</h2>
+
+                    <p>
+                        Quizzes from your enrolled courses
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="quiz-grid">
+
+
+                <!-- QUIZ 1 -->
+
+                <div class="quiz-card">
+
+                    <div class="quiz-card-top python-quiz">
+
+                        <span>PY</span>
+
+                        <small>
+                            PROGRAMMING
+                        </small>
+
+                    </div>
+
+                    <div class="quiz-content">
+
+                        <span class="course-tag">
+                            PYTHON PROGRAMMING
+                        </span>
+
+                        <h3>
+                            Python Fundamentals
+                        </h3>
+
+                        <p>
+                            Test your knowledge of variables,
+                            data types and operators.
+                        </p>
+
+                        <div class="quiz-info">
+
+                            <span>❓ 10 Questions</span>
+                            <span>⏱️ 15 Minutes</span>
+
+                        </div>
+
+                        <div class="quiz-footer">
+
+                            <span class="quiz-difficulty">
+                                Easy
+                            </span>
+
+                            <button
+                                class="start-quiz-btn"
+                                onclick="startQuiz()">
+
+                                Start Quiz →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUIZ 2 -->
+
+                <div class="quiz-card">
+
+                    <div class="quiz-card-top database-quiz">
+
+                        <span>DB</span>
+
+                        <small>
+                            DATABASE
+                        </small>
+
+                    </div>
+
+                    <div class="quiz-content">
+
+                        <span class="course-tag">
+                            DATABASE
+                        </span>
+
+                        <h3>
+                            SQL Fundamentals
+                        </h3>
+
+                        <p>
+                            Test your understanding of SQL
+                            commands and database concepts.
+                        </p>
+
+                        <div class="quiz-info">
+
+                            <span>❓ 15 Questions</span>
+                            <span>⏱️ 20 Minutes</span>
+
+                        </div>
+
+                        <div class="quiz-footer">
+
+                            <span class="quiz-difficulty medium">
+                                Medium
+                            </span>
+
+                            <button
+                                class="start-quiz-btn"
+                                onclick="startQuiz()">
+
+                                Start Quiz →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUIZ 3 -->
+
+                <div class="quiz-card">
+
+                    <div class="quiz-card-top web-quiz">
+
+                        <span>WEB</span>
+
+                        <small>
+                            DEVELOPMENT
+                        </small>
+
+                    </div>
+
+                    <div class="quiz-content">
+
+                        <span class="course-tag">
+                            WEB DEVELOPMENT
+                        </span>
+
+                        <h3>
+                            HTML & CSS Basics
+                        </h3>
+
+                        <p>
+                            Check your knowledge of HTML elements,
+                            CSS properties and layouts.
+                        </p>
+
+                        <div class="quiz-info">
+
+                            <span>❓ 12 Questions</span>
+                            <span>⏱️ 15 Minutes</span>
+
+                        </div>
+
+                        <div class="quiz-footer">
+
+                            <span class="quiz-difficulty">
+                                Easy
+                            </span>
+
+                            <button
+                                class="start-quiz-btn"
+                                onclick="startQuiz()">
+
+                                Start Quiz →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COMPLETED QUIZ -->
+
+                <div class="quiz-card completed-quiz">
+
+                    <div class="quiz-card-top ai-quiz">
+
+                        <span>AI</span>
+
+                        <small>
+                            ARTIFICIAL INTELLIGENCE
+                        </small>
+
+                    </div>
+
+                    <div class="quiz-content">
+
+                        <span class="course-tag">
+                            ARTIFICIAL INTELLIGENCE
+                        </span>
+
+                        <h3>
+                            AI Fundamentals
+                        </h3>
+
+                        <p>
+                            Introduction to artificial intelligence
+                            concepts and applications.
+                        </p>
+
+                        <div class="quiz-result">
+
+                            <strong>92%</strong>
+
+                            <span>
+                                ✓ Completed
+                            </span>
+
+                        </div>
+
+                        <div class="quiz-footer">
+
+                            <span class="quiz-difficulty">
+                                Completed
+                            </span>
+
+                            <button class="review-btn">
+
+                                Review Quiz
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ================= QUIZ MODAL ================= -->
+
+<div class="quiz-modal-overlay" id="quizModal">
+
+    <div class="quiz-modal">
+
+        <div class="quiz-modal-header">
+
+            <div>
+
+                <span>
+                    PYTHON PROGRAMMING
+                </span>
+
+                <h2>
+                    Python Fundamentals
+                </h2>
+
+            </div>
+
+            <button
+                onclick="closeQuiz()"
+                class="quiz-close">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <!-- PROGRESS -->
+
+        <div class="quiz-progress">
+
+            <div class="quiz-progress-info">
+
+                <span id="questionNumber">
+                    Question 1 of 5
+                </span>
+
+                <span id="quizPercentage">
+                    20%
+                </span>
+
+            </div>
+
+            <div class="progress-bar">
+
+                <div
+                    class="progress"
+                    id="quizProgress"
+                    style="width:20%">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION -->
+
+        <div class="question-container">
+
+            <h3 id="questionText">
+
+                Which of the following is used to
+                display output in Python?
+
+            </h3>
+
+
+            <div class="answer-options">
+
+                <button onclick="selectAnswer(this)">
+                    echo()
+                </button>
+
+                <button onclick="selectAnswer(this)">
+                    print()
+                </button>
+
+                <button onclick="selectAnswer(this)">
+                    display()
+                </button>
+
+                <button onclick="selectAnswer(this)">
+                    output()
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUIZ FOOTER -->
+
+        <div class="quiz-modal-footer">
+
+            <span id="quizMessage"></span>
+
+            <button
+                class="next-question-btn"
+                onclick="nextQuestion()">
+
+                Next Question →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduTrack | Attendance</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-small">E</div>
+            <h2>EduTrack</h2>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <p class="menu-title">MAIN</p>
+
+            <a href="dashboard.html" class="menu-item">
+                <span>🏠</span> Dashboard
+            </a>
+
+            <a href="courses.html" class="menu-item">
+                <span>📚</span> My Courses
+            </a>
+
+            <a href="assignments.html" class="menu-item">
+                <span>📝</span> Assignments
+            </a>
+
+            <a href="quizzes.html" class="menu-item">
+                <span>❓</span> Quizzes
+            </a>
+
+            <p class="menu-title">ACADEMICS</p>
+
+            <a href="attendance.html" class="menu-item active">
+                <span>📅</span> Attendance
+            </a>
+
+            <a href="grades.html" class="menu-item">
+                <span>📊</span> Grades
+            </a>
+
+            <p class="menu-title">OTHERS</p>
+
+            <a href="announcements.html" class="menu-item">
+                <span>📢</span> Announcements
+            </a>
+
+            <a href="profile.html" class="menu-item">
+                <span>👤</span> My Profile
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="menu-item">
+                <span>⚙️</span> Settings
+            </a>
+
+            <a href="index.html" class="menu-item logout">
+                <span>🚪</span> Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h3>Attendance</h3>
+                <p>Track your class attendance</p>
+            </div>
+
+            <div class="topbar-right">
+
+                <button class="notification">
+                    🔔
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="profile-mini">
+
+                    <div class="avatar">S</div>
+
+                    <div>
+                        <strong>Srinithi</strong>
+                        <small>Student</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- HEADER -->
+
+        <section class="page-intro">
+
+            <div>
+
+                <h1>Attendance Overview</h1>
+
+                <p>
+                    Keep track of your attendance and stay above
+                    the required percentage.
+                </p>
+
+            </div>
+
+            <select class="semester-select">
+
+                <option>Semester 5</option>
+                <option>Semester 4</option>
+                <option>Semester 3</option>
+
+            </select>
+
+        </section>
+
+
+        <!-- ATTENDANCE SUMMARY -->
+
+        <section class="attendance-summary">
+
+
+            <!-- OVERALL -->
+
+            <div class="attendance-overall">
+
+                <div class="attendance-circle">
+
+                    <div>
+
+                        <strong>87%</strong>
+
+                        <span>Overall</span>
+
+                    </div>
+
+                </div>
+
+                <h3>Good Attendance</h3>
+
+                <p>
+                    You're above the required 75%.
+                </p>
+
+            </div>
+
+
+            <!-- PRESENT -->
+
+            <div class="attendance-stat">
+
+                <span class="attendance-stat-icon">
+                    ✅
+                </span>
+
+                <div>
+
+                    <strong>104</strong>
+
+                    <p>Classes Present</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ABSENT -->
+
+            <div class="attendance-stat">
+
+                <span class="attendance-stat-icon">
+                    ❌
+                </span>
+
+                <div>
+
+                    <strong>12</strong>
+
+                    <p>Classes Absent</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- LATE -->
+
+            <div class="attendance-stat">
+
+                <span class="attendance-stat-icon">
+                    ⏰
+                </span>
+
+                <div>
+
+                    <strong>04</strong>
+
+                    <p>Late Arrivals</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SUBJECT ATTENDANCE -->
+
+        <section class="dashboard-card attendance-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>Subject-wise Attendance</h2>
+
+                    <p>
+                        Attendance percentage for each subject
+                    </p>
+
+                </div>
+
+                <span class="attendance-required">
+                    Required: 75%
+                </span>
+
+            </div>
+
+
+            <div class="subject-attendance">
+
+
+                <!-- PYTHON -->
+
+                <div class="subject-row">
+
+                    <div class="subject-name">
+
+                        <div class="subject-icon python-subject">
+                            PY
+                        </div>
+
+                        <div>
+
+                            <strong>Python Programming</strong>
+
+                            <small>
+                                28 / 32 classes
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subject-progress">
+
+                        <div class="subject-progress-info">
+
+                            <span>87.5%</span>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress"
+                                style="width:87.5%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <span class="attendance-good">
+                        Good
+                    </span>
+
+                </div>
+
+
+                <!-- WEB -->
+
+                <div class="subject-row">
+
+                    <div class="subject-name">
+
+                        <div class="subject-icon web-subject">
+                            WD
+                        </div>
+
+                        <div>
+
+                            <strong>Web Development</strong>
+
+                            <small>
+                                25 / 30 classes
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subject-progress">
+
+                        <div class="subject-progress-info">
+
+                            <span>83.3%</span>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress"
+                                style="width:83.3%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <span class="attendance-good">
+                        Good
+                    </span>
+
+                </div>
+
+
+                <!-- DATABASE -->
+
+                <div class="subject-row">
+
+                    <div class="subject-name">
+
+                        <div class="subject-icon db-subject">
+                            DB
+                        </div>
+
+                        <div>
+
+                            <strong>Database Management</strong>
+
+                            <small>
+                                22 / 28 classes
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subject-progress">
+
+                        <div class="subject-progress-info">
+
+                            <span>78.6%</span>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress"
+                                style="width:78.6%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <span class="attendance-good">
+                        Good
+                    </span>
+
+                </div>
+
+
+                <!-- AI -->
+
+                <div class="subject-row">
+
+                    <div class="subject-name">
+
+                        <div class="subject-icon ai-subject">
+                            AI
+                        </div>
+
+                        <div>
+
+                            <strong>Artificial Intelligence</strong>
+
+                            <small>
+                                29 / 30 classes
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subject-progress">
+
+                        <div class="subject-progress-info">
+
+                            <span>96.7%</span>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress"
+                                style="width:96.7%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <span class="attendance-excellent">
+                        Excellent
+                    </span>
+
+                </div>
+
+
+                <!-- MATHEMATICS -->
+
+                <div class="subject-row">
+
+                    <div class="subject-name">
+
+                        <div class="subject-icon math-subject">
+                            M
+                        </div>
+
+                        <div>
+
+                            <strong>Mathematics</strong>
+
+                            <small>
+                                18 / 25 classes
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subject-progress">
+
+                        <div class="subject-progress-info">
+
+                            <span>72%</span>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress low-progress"
+                                style="width:72%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <span class="attendance-low">
+                        Low
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOTTOM GRID -->
+
+        <section class="attendance-bottom-grid">
+
+
+            <!-- MONTHLY -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>Monthly Attendance</h2>
+
+                        <p>
+                            Your attendance trend
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="monthly-chart">
+
+                    <div class="chart-y">
+
+                        <span>100%</span>
+                        <span>75%</span>
+                        <span>50%</span>
+                        <span>25%</span>
+                        <span>0%</span>
+
+                    </div>
+
+
+                    <div class="chart-bars">
+
+                        <div class="chart-column">
+
+                            <div
+                                class="chart-bar"
+                                style="height:80%">
+                            </div>
+
+                            <span>Mar</span>
+
+                        </div>
+
+                        <div class="chart-column">
+
+                            <div
+                                class="chart-bar"
+                                style="height:88%">
+                            </div>
+
+                            <span>Apr</span>
+
+                        </div>
+
+                        <div class="chart-column">
+
+                            <div
+                                class="chart-bar"
+                                style="height:75%">
+                            </div>
+
+                            <span>May</span>
+
+                        </div>
+
+                        <div class="chart-column">
+
+                            <div
+                                class="chart-bar"
+                                style="height:92%">
+                            </div>
+
+                            <span>Jun</span>
+
+                        </div>
+
+                        <div class="chart-column">
+
+                            <div
+                                class="chart-bar"
+                                style="height:87%">
+                            </div>
+
+                            <span>Jul</span>
+
+                        </div>
+
+                        <div class="chart-column">
+
+                            <div
+                                class="chart-bar"
+                                style="height:90%">
+                            </div>
+
+                            <span>Aug</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RECENT RECORDS -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>Recent Records</h2>
+
+                        <p>
+                            Latest attendance
+                        </p>
+
+                    </div>
+
+                    <a href="#">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="attendance-record">
+
+                    <div>
+
+                        <strong>Python Programming</strong>
+
+                        <small>Aug 27 • 10:00 AM</small>
+
+                    </div>
+
+                    <span class="present-badge">
+                        Present
+                    </span>
+
+                </div>
+
+
+                <div class="attendance-record">
+
+                    <div>
+
+                        <strong>Database Management</strong>
+
+                        <small>Aug 26 • 11:00 AM</small>
+
+                    </div>
+
+                    <span class="present-badge">
+                        Present
+                    </span>
+
+                </div>
+
+
+                <div class="attendance-record">
+
+                    <div>
+
+                        <strong>Mathematics</strong>
+
+                        <small>Aug 25 • 9:00 AM</small>
+
+                    </div>
+
+                    <span class="absent-badge">
+                        Absent
+                    </span>
+
+                </div>
+
+
+                <div class="attendance-record">
+
+                    <div>
+
+                        <strong>Web Development</strong>
+
+                        <small>Aug 24 • 2:00 PM</small>
+
+                    </div>
+
+                    <span class="present-badge">
+                        Present
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WARNING -->
+
+        <div class="attendance-warning">
+
+            <span>⚠️</span>
+
+            <div>
+
+                <strong>Attendance Reminder</strong>
+
+                <p>
+                    Your Mathematics attendance is currently
+                    72%. Attend the upcoming classes to maintain
+                    the required 75% attendance.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>
