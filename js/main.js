@@ -1,21 +1,5 @@
-// =====================================
-// MAIN JAVASCRIPT MODULE
-// =====================================
+import { sayHello, add } from "./functions.js";
 
-import {
-    initRegister
-} from "./register.js";
+sayHello();
 
-import {
-    initLogin,
-    initLoginPassword
-} from "./login.js";
-
-
-// REGISTER
-initRegister();
-
-
-// LOGIN
-initLogin();
-initLoginPassword();
+console.log(add(10, 20));
