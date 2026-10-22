@@ -1,0 +1,737 @@
+/* ========================================================
+   EDUTRACK COURSE CHATBOT (EDUBOT) STYLES
+   ======================================================== */
+
+:root {
+  --edubot-primary: #5b4bdb;
+  --edubot-primary-dark: #4738be;
+  --edubot-gradient: linear-gradient(135deg, #5b4bdb, #7658e8);
+  --edubot-gradient-header: linear-gradient(135deg, #4d3cc8, #6d4de3);
+  --edubot-bg-user: linear-gradient(135deg, #5b4bdb, #7658e8);
+  --edubot-bg-bot: #ffffff;
+  --edubot-bg-window: #f8fafc;
+  --edubot-border: #e2e8f0;
+  --edubot-text-main: #1e293b;
+  --edubot-text-muted: #64748b;
+  --edubot-shadow-lg: 0 20px 45px -10px rgba(91, 75, 219, 0.25), 0 10px 20px -5px rgba(0, 0, 0, 0.08);
+  --edubot-radius: 18px;
+}
+
+/* Floating Launcher Button */
+.edubot-launcher {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--edubot-gradient);
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(91, 75, 219, 0.4);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  outline: none;
+  animation: edubotPulse 3s infinite;
+}
+
+.edubot-launcher:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(91, 75, 219, 0.55);
+}
+
+.edubot-launcher:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.edubot-launcher-icon {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.edubot-launcher-text {
+  letter-spacing: 0.2px;
+}
+
+.edubot-online-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 10px;
+  height: 10px;
+  background: #10b981;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+@keyframes edubotPulse {
+  0%, 100% {
+    box-shadow: 0 8px 25px rgba(91, 75, 219, 0.4);
+  }
+  50% {
+    box-shadow: 0 8px 32px rgba(118, 88, 232, 0.65);
+  }
+}
+
+/* Chat Window Modal */
+.edubot-window {
+  position: fixed;
+  bottom: 92px;
+  right: 28px;
+  width: 410px;
+  max-width: calc(100vw - 36px);
+  height: 620px;
+  max-height: calc(100vh - 120px);
+  background: var(--edubot-bg-window);
+  border-radius: var(--edubot-radius);
+  box-shadow: var(--edubot-shadow-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 99999;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  font-family: inherit;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px) scale(0.95);
+  transform-origin: bottom right;
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.edubot-window.edubot-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+/* Expanded state */
+.edubot-window.edubot-expanded {
+  width: 580px;
+  height: 720px;
+  max-height: calc(100vh - 110px);
+}
+
+/* Header */
+.edubot-header {
+  background: var(--edubot-gradient-header);
+  color: #ffffff;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.edubot-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.edubot-avatar-wrap {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  backdrop-filter: blur(4px);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+}
+
+.edubot-status-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 11px;
+  height: 11px;
+  background: #10b981;
+  border: 2px solid #5b4bdb;
+  border-radius: 50%;
+}
+
+.edubot-header-text h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+}
+
+.edubot-header-badge {
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 2px 7px;
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.edubot-header-text p {
+  font-size: 11px;
+  opacity: 0.88;
+  margin: 2px 0 0 0;
+  color: #e0e7ff;
+}
+
+.edubot-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.edubot-action-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.edubot-action-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: scale(1.05);
+}
+
+/* Quick Prompt Suggestions Bar */
+.edubot-quick-prompts {
+  display: flex;
+  gap: 8px;
+  padding: 10px 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+  background: #ffffff;
+  border-bottom: 1px solid var(--edubot-border);
+  scrollbar-width: none;
+  flex-shrink: 0;
+}
+
+.edubot-quick-prompts::-webkit-scrollbar {
+  display: none;
+}
+
+.edubot-chip {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.edubot-chip:hover {
+  background: #5b4bdb;
+  border-color: #5b4bdb;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Chat Messages Container */
+.edubot-messages {
+  flex: 1;
+  padding: 18px 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #f8fafc;
+  scroll-behavior: smooth;
+}
+
+.edubot-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.edubot-messages::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+/* Message Bubble */
+.edubot-msg {
+  display: flex;
+  gap: 10px;
+  max-width: 90%;
+  animation: edubotFadeIn 0.25s ease-out;
+}
+
+@keyframes edubotFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.edubot-msg.user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.edubot-msg.bot {
+  align-self: flex-start;
+}
+
+.edubot-msg-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e0e7ff;
+  color: #4338ca;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+  border: 1px solid #c7d2fe;
+}
+
+.edubot-msg.user .edubot-msg-avatar {
+  background: #5b4bdb;
+  color: #ffffff;
+  border-color: #4738be;
+}
+
+.edubot-msg-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.edubot-msg-bubble {
+  padding: 11px 15px;
+  border-radius: 16px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.edubot-msg.bot .edubot-msg-bubble {
+  background: #ffffff;
+  color: var(--edubot-text-main);
+  border: 1px solid #e2e8f0;
+  border-top-left-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.edubot-msg.user .edubot-msg-bubble {
+  background: var(--edubot-bg-user);
+  color: #ffffff;
+  border-top-right-radius: 4px;
+  box-shadow: 0 4px 12px rgba(91, 75, 219, 0.25);
+}
+
+.edubot-msg-time {
+  font-size: 10px;
+  color: #94a3b8;
+  padding: 0 4px;
+}
+
+.edubot-msg.user .edubot-msg-time {
+  text-align: right;
+}
+
+/* Rich Course Preview Card in Chat */
+.edubot-course-card {
+  margin-top: 10px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s;
+}
+
+.edubot-course-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(91, 75, 219, 0.12);
+}
+
+.edubot-card-head {
+  padding: 12px 14px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edubot-card-head.python-bg { background: #3776ab; }
+.edubot-card-head.web-bg { background: #e44d26; }
+.edubot-card-head.database-bg { background: #087f8c; }
+.edubot-card-head.ai-bg { background: #6c4bb7; }
+.edubot-card-head.default-bg { background: #5b4bdb; }
+
+.edubot-card-code {
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.edubot-card-tag {
+  font-size: 9px;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.edubot-card-body {
+  padding: 12px 14px;
+}
+
+.edubot-card-body h4 {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+  color: #0f172a;
+}
+
+.edubot-card-instructor {
+  font-size: 11.5px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.edubot-card-stats {
+  display: flex;
+  gap: 14px;
+  font-size: 11px;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+.edubot-card-progress-wrap {
+  margin-bottom: 12px;
+}
+
+.edubot-card-progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 4px;
+}
+
+.edubot-card-progress-track {
+  width: 100%;
+  height: 6px;
+  background: #f1f5f9;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.edubot-card-progress-fill {
+  height: 100%;
+  background: #5b4bdb;
+  border-radius: 6px;
+}
+
+.edubot-card-progress-fill.completed {
+  background: #10b981;
+}
+
+.edubot-card-btn {
+  display: block;
+  text-align: center;
+  padding: 8px 12px;
+  background: #5b4bdb;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.edubot-card-btn:hover {
+  background: #4738be;
+}
+
+.edubot-card-btn.completed {
+  background: #10b981;
+}
+
+.edubot-card-btn.completed:hover {
+  background: #059669;
+}
+
+/* Follow-up Action Chips in message */
+.edubot-followups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.edubot-followup-btn {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  font-size: 11.5px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.edubot-followup-btn:hover {
+  border-color: #5b4bdb;
+  color: #5b4bdb;
+  background: #f5f3ff;
+}
+
+/* Bullet list in bot responses */
+.edubot-list {
+  margin: 8px 0 4px 0;
+  padding-left: 18px;
+}
+
+.edubot-list li {
+  margin-bottom: 4px;
+  font-size: 13px;
+  color: #334155;
+}
+
+/* Typing Indicator */
+.edubot-typing {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 12px 16px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  border-top-left-radius: 4px;
+  width: fit-content;
+}
+
+.edubot-typing-dot {
+  width: 7px;
+  height: 7px;
+  background: #818cf8;
+  border-radius: 50%;
+  animation: edubotBounce 1.4s infinite ease-in-out both;
+}
+
+.edubot-typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.edubot-typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes edubotBounce {
+  0%, 80%, 100% {
+    transform: scale(0.6);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Input Area */
+.edubot-input-area {
+  padding: 12px 16px;
+  background: #ffffff;
+  border-top: 1px solid var(--edubot-border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.edubot-input {
+  flex: 1;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  padding: 11px 16px;
+  border-radius: 25px;
+  font-size: 13.5px;
+  font-family: inherit;
+  color: var(--edubot-text-main);
+  outline: none;
+  transition: all 0.2s;
+}
+
+.edubot-input:focus {
+  border-color: #5b4bdb;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(91, 75, 219, 0.12);
+}
+
+.edubot-input::placeholder {
+  color: #94a3b8;
+}
+
+.edubot-send-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--edubot-gradient);
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(91, 75, 219, 0.3);
+  transition: all 0.2s;
+}
+
+.edubot-send-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 6px 16px rgba(91, 75, 219, 0.45);
+}
+
+.edubot-send-btn:active {
+  transform: scale(0.95);
+}
+
+.edubot-send-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Ask EduBot banner card for page insertion */
+.edubot-banner-btn {
+  background: linear-gradient(135deg, rgba(91, 75, 219, 0.1), rgba(118, 88, 232, 0.15));
+  border: 1px solid rgba(91, 75, 219, 0.25);
+  color: #5b4bdb;
+  padding: 9px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+/* 10-Question Boundary Styles */
+.edubot-boundary-tag {
+  display: inline-block;
+  background: #ede9fe;
+  color: #6d28d9;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+  border: 1px solid #ddd6fe;
+}
+
+.edubot-scope-warning {
+  background: #fffbeb;
+  border: 1px solid #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  color: #92400e;
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+.edubot-question-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.edubot-question-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  line-height: 1.35;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.edubot-question-btn:hover {
+  border-color: #5b4bdb;
+  background: #f5f3ff;
+  color: #5b4bdb;
+  transform: translateX(3px);
+  box-shadow: 0 2px 8px rgba(91, 75, 219, 0.12);
+}
+
+.edubot-q-num {
+  background: #ede9fe;
+  color: #6d28d9;
+  font-weight: 700;
+  font-size: 10.5px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.edubot-question-btn:hover .edubot-q-num {
+  background: #5b4bdb;
+  color: #ffffff;
+}
+
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+  .edubot-window {
+    right: 16px;
+    bottom: 84px;
+    width: calc(100vw - 32px);
+    height: 520px;
+  }
+  .edubot-launcher {
+    bottom: 18px;
+    right: 18px;
+    padding: 10px 16px;
+  }
+  .edubot-launcher-text {
+    display: none;
+  }
+}

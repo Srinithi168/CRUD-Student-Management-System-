@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduTrack | My Courses</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chatbot.css">
 </head>
 
 <body>
@@ -121,9 +122,15 @@
                 </p>
             </div>
 
-            <button class="primary-btn">
-                + Explore Courses
-            </button>
+            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                <button class="edubot-banner-btn ask-edubot-trigger" id="openChatbotBannerBtn" title="Ask course-related questions">
+                    💬 Ask EduBot
+                </button>
+
+                <a href="course.html" class="primary-btn" style="text-decoration: none; display: inline-flex; align-items: center;">
+                    + Explore Courses
+                </a>
+            </div>
 
         </section>
 

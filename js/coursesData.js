@@ -1,0 +1,613 @@
+// =====================================
+// COURSES DATA MODULE
+// =====================================
+// Provides JSON course data with fetch loading + static fallback for file:// protocol
+
+export const DEFAULT_COURSES_DATA = {
+  "system": {
+    "platform": "EduTrack Learning Management System",
+    "version": "2.0.0",
+    "student": {
+      "name": "Srinithi",
+      "role": "Student",
+      "avatar": "S",
+      "enrolledCount": 4,
+      "inProgressCount": 3,
+      "completedCount": 1,
+      "learningHours": "42h"
+    }
+  },
+  "courses": [
+    {
+      "id": "python-programming",
+      "code": "PY",
+      "title": "Python Programming",
+      "category": "PROGRAMMING",
+      "bgClass": "python-bg",
+      "color": "#3776ab",
+      "instructor": {
+        "name": "Dr. Arun Kumar",
+        "title": "Senior Python Architect & Academic Mentor",
+        "avatar": "👨‍🏫",
+        "email": "arunkumar@edutrack.edu",
+        "officeHours": "Tuesdays 4:00 PM - 6:00 PM"
+      },
+      "modulesCount": 8,
+      "completedModules": 6,
+      "totalHours": 12,
+      "learningTime": "12 Hours",
+      "progressPercent": 75,
+      "status": "in-progress",
+      "statusLabel": "In Progress",
+      "isCompleted": false,
+      "level": "Beginner to Intermediate",
+      "rating": 4.9,
+      "enrolledStudents": 1450,
+      "fee": "Free (Included in Curriculum)",
+      "certificate": {
+        "available": true,
+        "status": "In Progress (75% completed - 2 modules remaining)",
+        "type": "Verified Python Developer Certificate"
+      },
+      "schedule": "Self-paced with live mentor Q&A every Tuesday at 4:00 PM",
+      "prerequisites": "None! Basic computer literacy is sufficient. Perfect for first-time programmers.",
+      "description": "Master Python programming fundamentals, data structures, algorithms, and object-oriented development with hands-on exercises and real-world projects.",
+      "learningOutcomes": [
+        "Write clean, idiomatic Python code for scripts and automation",
+        "Understand control flow, conditionals, and looping mechanisms",
+        "Master core data structures (Lists, Dictionaries, Sets, Tuples)",
+        "Build modular programs using functions and classes (OOP)",
+        "Handle errors, file I/O operations, and standard Python libraries",
+        "Develop a fully functional capstone automation project"
+      ],
+      "syllabus": [
+        {
+          "moduleNumber": 1,
+          "title": "Introduction to Python & Setup",
+          "duration": "1.5 Hours",
+          "status": "completed",
+          "summary": "Environment installation, IDE setup, interactive shell, first Hello World program."
+        },
+        {
+          "moduleNumber": 2,
+          "title": "Variables, Data Types & Operators",
+          "duration": "1.5 Hours",
+          "status": "completed",
+          "summary": "Numeric types, strings, boolean logic, input/output formatting, type casting."
+        },
+        {
+          "moduleNumber": 3,
+          "title": "Control Flow & Loops",
+          "duration": "1.5 Hours",
+          "status": "completed",
+          "summary": "If/elif/else statements, for loops, while loops, break and continue statements."
+        },
+        {
+          "moduleNumber": 4,
+          "title": "Functions & Scope",
+          "duration": "1.5 Hours",
+          "status": "completed",
+          "summary": "Function definition, parameters, return values, lambda functions, global vs local scope."
+        },
+        {
+          "moduleNumber": 5,
+          "title": "Data Structures in Depth",
+          "duration": "2.0 Hours",
+          "status": "completed",
+          "summary": "Lists manipulation, slicing, tuples, dictionary mapping, sets, and comprehension."
+        },
+        {
+          "moduleNumber": 6,
+          "title": "Object-Oriented Programming (OOP)",
+          "duration": "2.0 Hours",
+          "status": "completed",
+          "summary": "Classes, objects, constructors (__init__), inheritance, encapsulation, polymorphism."
+        },
+        {
+          "moduleNumber": 7,
+          "title": "File Handling & Exception Management",
+          "duration": "1.0 Hour",
+          "status": "in-progress",
+          "summary": "Reading/writing text and CSV files, try/except/finally blocks, custom exceptions."
+        },
+        {
+          "moduleNumber": 8,
+          "title": "Capstone Project & Final Assessment",
+          "duration": "1.0 Hour",
+          "status": "locked",
+          "summary": "Building a CLI student grade analyzer and portfolio project."
+        }
+      ],
+      "courseAction": {
+        "text": "Continue Learning →",
+        "link": "course-details.html",
+        "isCompletedAction": false
+      },
+      "faq": [
+        {
+          "question": "Can I learn Python with no prior programming experience?",
+          "answer": "Absolutely! Python Programming is designed specifically for beginners, starting with the absolute basics."
+        },
+        {
+          "question": "When can I claim my certificate?",
+          "answer": "Once you complete all 8 modules and submit the capstone assignment, your certificate is automatically unlocked."
+        }
+      ]
+    },
+    {
+      "id": "web-development",
+      "code": "WEB",
+      "title": "Full Stack Web Development",
+      "category": "DEVELOPMENT",
+      "bgClass": "web-bg",
+      "color": "#e44d26",
+      "instructor": {
+        "name": "Prof. Priya Sharma",
+        "title": "Lead Full Stack Architect & Frontend Specialist",
+        "avatar": "👩‍🏫",
+        "email": "priyasharma@edutrack.edu",
+        "officeHours": "Thursdays 5:00 PM - 7:00 PM"
+      },
+      "modulesCount": 10,
+      "completedModules": 5,
+      "totalHours": 20,
+      "learningTime": "20 Hours",
+      "progressPercent": 50,
+      "status": "in-progress",
+      "statusLabel": "In Progress",
+      "isCompleted": false,
+      "level": "Intermediate",
+      "rating": 4.8,
+      "enrolledStudents": 2150,
+      "fee": "Free (Included in Curriculum)",
+      "certificate": {
+        "available": true,
+        "status": "In Progress (50% completed - 5 modules remaining)",
+        "type": "Certified Full Stack Web Developer"
+      },
+      "schedule": "Self-paced with live coding labs every Thursday at 5:00 PM",
+      "prerequisites": "Basic understanding of computers and web browsers. No prior programming needed.",
+      "description": "Complete web development path covering HTML5, CSS3, modern JavaScript, frontend frameworks, backend APIs, and databases.",
+      "learningOutcomes": [
+        "Craft responsive layouts using CSS Flexbox, Grid, and mobile-first principles",
+        "Master modern JavaScript ES6+, DOM manipulation, and asynchronous APIs",
+        "Build modular client-side apps using modern component architectures",
+        "Create RESTful APIs and microservices with Node.js and Express",
+        "Connect relational and document databases with backend services",
+        "Deploy production-ready full-stack applications with CI/CD"
+      ],
+      "syllabus": [
+        {
+          "moduleNumber": 1,
+          "title": "HTML5 Semantics & Accessible Structure",
+          "duration": "2.0 Hours",
+          "status": "completed",
+          "summary": "Semantic elements, forms, audio/video integration, SEO meta tags."
+        },
+        {
+          "moduleNumber": 2,
+          "title": "Modern CSS3, Flexbox & CSS Grid",
+          "duration": "2.0 Hours",
+          "status": "completed",
+          "summary": "Box model, responsive units, Flexbox layouts, Grid alignment, animations."
+        },
+        {
+          "moduleNumber": 3,
+          "title": "Responsive Design & Mobile-First Workflow",
+          "duration": "2.0 Hours",
+          "status": "completed",
+          "summary": "Media queries, responsive typography, fluid images, adaptive UI components."
+        },
+        {
+          "moduleNumber": 4,
+          "title": "JavaScript Essentials & DOM Manipulation",
+          "duration": "2.0 Hours",
+          "status": "completed",
+          "summary": "Variables, functions, events, query selectors, dynamic DOM modification."
+        },
+        {
+          "moduleNumber": 5,
+          "title": "Modern ES6+ & Asynchronous JavaScript",
+          "duration": "2.0 Hours",
+          "status": "completed",
+          "summary": "Arrow functions, destructuring, promises, async/await, Fetch API."
+        },
+        {
+          "moduleNumber": 6,
+          "title": "Frontend Frameworks & UI Architecture",
+          "duration": "2.0 Hours",
+          "status": "in-progress",
+          "summary": "Component lifecycle, state management, props, reactive user interfaces."
+        },
+        {
+          "moduleNumber": 7,
+          "title": "Backend Fundamentals with Node.js & Express",
+          "duration": "2.0 Hours",
+          "status": "locked",
+          "summary": "Node runtime, HTTP servers, Express routes, middleware, request handling."
+        },
+        {
+          "moduleNumber": 8,
+          "title": "RESTful API Design & JSON Services",
+          "duration": "2.0 Hours",
+          "status": "locked",
+          "summary": "Endpoints, CRUD methods, status codes, query parameters, data validation."
+        },
+        {
+          "moduleNumber": 9,
+          "title": "Database Integration & Authentication",
+          "duration": "2.0 Hours",
+          "status": "locked",
+          "summary": "Connecting databases, password hashing, JWT tokens, session security."
+        },
+        {
+          "moduleNumber": 10,
+          "title": "Full Stack Capstone Project & Deployment",
+          "duration": "2.0 Hours",
+          "status": "locked",
+          "summary": "End-to-end full stack web app deployed on cloud hosting."
+        }
+      ],
+      "courseAction": {
+        "text": "Continue Learning →",
+        "link": "course-details.html",
+        "isCompletedAction": false
+      },
+      "faq": [
+        {
+          "question": "What frontend framework is taught in this course?",
+          "answer": "The course covers modern vanilla JavaScript ES6+ deeply followed by component fundamentals in modern frameworks."
+        },
+        {
+          "question": "Is full stack web development suitable for beginners?",
+          "answer": "Yes! The first 5 modules build a solid foundation in HTML, CSS, and JavaScript before progressing to backend."
+        }
+      ]
+    },
+    {
+      "id": "database-management",
+      "code": "DB",
+      "title": "Database Management Systems",
+      "category": "DATABASE",
+      "bgClass": "database-bg",
+      "color": "#087f8c",
+      "instructor": {
+        "name": "Prof. Karthik Raj",
+        "title": "Database Administrator & Data Engineering Consultant",
+        "avatar": "👨‍🏫",
+        "email": "karthikraj@edutrack.edu",
+        "officeHours": "Wednesdays 3:30 PM - 5:30 PM"
+      },
+      "modulesCount": 9,
+      "completedModules": 5,
+      "totalHours": 15,
+      "learningTime": "15 Hours",
+      "progressPercent": 60,
+      "status": "in-progress",
+      "statusLabel": "In Progress",
+      "isCompleted": false,
+      "level": "Intermediate",
+      "rating": 4.7,
+      "enrolledStudents": 1320,
+      "fee": "Free (Included in Curriculum)",
+      "certificate": {
+        "available": true,
+        "status": "In Progress (60% completed - 4 modules remaining)",
+        "type": "Database Specialist & SQL Query Certification"
+      },
+      "schedule": "Self-paced with weekly interactive SQL query labs on Wednesdays at 3:30 PM",
+      "prerequisites": "Basic understanding of programming logic and elementary computer science concepts.",
+      "description": "Comprehensive coverage of database architectures, relational schema design, SQL querying, normalization (1NF-BCNF), transactions, ACID properties, and indexing.",
+      "learningOutcomes": [
+        "Design relational database schemas with ER modeling and constraints",
+        "Write complex SQL queries with joins, grouping, and aggregate functions",
+        "Normalize database tables from 1NF to BCNF to remove redundancy",
+        "Optimize queries with B-Tree indexes and execution plan analysis",
+        "Manage concurrent transactions with ACID compliance and locking protocols",
+        "Understand NoSQL key-value and document data models (MongoDB)"
+      ],
+      "syllabus": [
+        {
+          "moduleNumber": 1,
+          "title": "Introduction to DBMS & Relational Model",
+          "duration": "1.5 Hours",
+          "status": "completed",
+          "summary": "Database concepts, relational algebra, primary/foreign keys, schema integrity."
+        },
+        {
+          "moduleNumber": 2,
+          "title": "Entity-Relationship (ER) Modeling",
+          "duration": "1.5 Hours",
+          "status": "completed",
+          "summary": "Entities, attributes, cardinality, ER diagrams, mapping ER models to tables."
+        },
+        {
+          "moduleNumber": 3,
+          "title": "SQL Fundamentals (DDL, DML, DCL)",
+          "duration": "1.5 Hours",
+          "status": "completed",
+          "summary": "CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, and GRANT permissions."
+        },
+        {
+          "moduleNumber": 4,
+          "title": "Advanced SQL Queries & Joins",
+          "duration": "2.0 Hours",
+          "status": "completed",
+          "summary": "INNER JOIN, LEFT/RIGHT JOIN, GROUP BY, HAVING, subqueries, view definitions."
+        },
+        {
+          "moduleNumber": 5,
+          "title": "Database Normalization (1NF to BCNF)",
+          "duration": "2.0 Hours",
+          "status": "completed",
+          "summary": "Functional dependencies, 1NF, 2NF, 3NF, BCNF decomposition without data loss."
+        },
+        {
+          "moduleNumber": 6,
+          "title": "Indexing & Query Optimization",
+          "duration": "1.5 Hours",
+          "status": "in-progress",
+          "summary": "Clustered/non-clustered indexes, B+ Trees, hashing, execution plan profiling."
+        },
+        {
+          "moduleNumber": 7,
+          "title": "Transactions & ACID Properties",
+          "duration": "1.5 Hours",
+          "status": "locked",
+          "summary": "Atomicity, Consistency, Isolation, Durability, commit/rollback states."
+        },
+        {
+          "moduleNumber": 8,
+          "title": "Concurrency Control & Recovery",
+          "duration": "1.5 Hours",
+          "status": "locked",
+          "summary": "Two-phase locking (2PL), deadlock prevention, write-ahead logging (WAL)."
+        },
+        {
+          "moduleNumber": 9,
+          "title": "NoSQL Databases & Modern Data Stores",
+          "duration": "2.0 Hours",
+          "status": "locked",
+          "summary": "Document stores (MongoDB), JSON queries, key-value stores, distributed databases."
+        }
+      ],
+      "courseAction": {
+        "text": "Continue Learning →",
+        "link": "course-details.html",
+        "isCompletedAction": false
+      },
+      "faq": [
+        {
+          "question": "What database software will we use?",
+          "answer": "We use MySQL and PostgreSQL for relational databases, plus MongoDB for NoSQL concepts."
+        },
+        {
+          "question": "What is normalization and why does it matter?",
+          "answer": "Normalization is the process of structuring a database to reduce data redundancy and improve data integrity."
+        }
+      ]
+    },
+    {
+      "id": "artificial-intelligence",
+      "code": "AI",
+      "title": "Introduction to Artificial Intelligence",
+      "category": "ARTIFICIAL INTELLIGENCE",
+      "bgClass": "ai-bg",
+      "color": "#6c4bb7",
+      "instructor": {
+        "name": "Dr. Meena Krishnan",
+        "title": "AI Research Director & Former Principal Data Scientist",
+        "avatar": "👩‍🏫",
+        "email": "meenakrishnan@edutrack.edu",
+        "officeHours": "Fridays 3:00 PM - 5:00 PM"
+      },
+      "modulesCount": 6,
+      "completedModules": 6,
+      "totalHours": 10,
+      "learningTime": "10 Hours",
+      "progressPercent": 100,
+      "status": "completed",
+      "statusLabel": "Completed",
+      "isCompleted": true,
+      "level": "Beginner to Advanced",
+      "rating": 4.9,
+      "enrolledStudents": 1850,
+      "fee": "Free (Included in Curriculum)",
+      "certificate": {
+        "available": true,
+        "status": "Issued & Downloadable",
+        "certificateId": "EDU-AI-2026-884",
+        "issueDate": "August 2026",
+        "type": "Professional Certificate in Artificial Intelligence Foundations"
+      },
+      "schedule": "Course Completed - Full permanent access to lecture notes, labs, and replays",
+      "prerequisites": "High-school mathematics (basic linear algebra and probability) and introductory Python programming.",
+      "description": "Explore the foundations of artificial intelligence, search algorithms, heuristic reasoning, machine learning basics, computer vision, NLP, and ethical AI governance.",
+      "learningOutcomes": [
+        "Formulate intelligent agent problems in observable and stochastic environments",
+        "Implement uninformed and heuristic search algorithms (BFS, DFS, A*, Minimax)",
+        "Understand knowledge representation and propositional/first-order logic",
+        "Train fundamental machine learning algorithms for classification and regression",
+        "Explore foundational neural network architectures and deep learning concepts",
+        "Analyze ethical implications, fairness, transparency, and safety in AI systems"
+      ],
+      "syllabus": [
+        {
+          "moduleNumber": 1,
+          "title": "Overview of AI, Agents & Environments",
+          "duration": "1.5 Hours",
+          "status": "completed",
+          "summary": "Turing test, history of AI, agent types, environmental properties."
+        },
+        {
+          "moduleNumber": 2,
+          "title": "Problem Solving with Search Algorithms",
+          "duration": "2.0 Hours",
+          "status": "completed",
+          "summary": "State space search, BFS, DFS, A* heuristic search, adversarial search."
+        },
+        {
+          "moduleNumber": 3,
+          "title": "Knowledge Representation & Logic",
+          "duration": "1.5 Hours",
+          "status": "completed",
+          "summary": "Propositional logic, inference rules, First-Order Logic (FOL), ontologies."
+        },
+        {
+          "moduleNumber": 4,
+          "title": "Introduction to Machine Learning",
+          "duration": "2.0 Hours",
+          "status": "completed",
+          "summary": "Supervised learning, linear regression, decision trees, neural network basics."
+        },
+        {
+          "moduleNumber": 5,
+          "title": "NLP & Computer Vision Fundamentals",
+          "duration": "1.5 Hours",
+          "status": "completed",
+          "summary": "Tokenization, bag-of-words, image convolutions, pretrained vision models."
+        },
+        {
+          "moduleNumber": 6,
+          "title": "AI Ethics, Bias Mitigation & Capstone",
+          "duration": "1.5 Hours",
+          "status": "completed",
+          "summary": "Algorithmic bias, explainability, safety guidelines, final AI project."
+        }
+      ],
+      "courseAction": {
+        "text": "✓ Course Completed",
+        "link": "course-details.html",
+        "isCompletedAction": true
+      },
+      "faq": [
+        {
+          "question": "Can I download my certificate for this course?",
+          "answer": "Yes! Your certificate (ID: EDU-AI-2026-884) is issued and can be viewed or downloaded from your profile or certificates page."
+        },
+        {
+          "question": "Can I still review completed materials?",
+          "answer": "Yes, you have lifetime archived access to all completed lessons, quizzes, and resources."
+        }
+      ]
+    }
+  ],
+  "catalogCourses": [
+    {
+      "id": "java-development",
+      "code": "JAVA",
+      "title": "Java Development",
+      "category": "PROGRAMMING",
+      "instructor": "Prof. Ramesh Sundaram",
+      "modulesCount": 10,
+      "totalHours": 22,
+      "level": "Advanced",
+      "rating": 4.8,
+      "status": "available",
+      "fee": "Free",
+      "description": "Master enterprise Java programming, OOP principles, collections framework, multithreading, and Spring Boot web services.",
+      "prerequisites": "Basic understanding of programming logic or Python/C++ syntax."
+    },
+    {
+      "id": "dsa",
+      "code": "DSA",
+      "title": "Data Structures & Algorithms",
+      "category": "COMPUTER SCIENCE",
+      "instructor": "Dr. Arun Kumar",
+      "modulesCount": 12,
+      "totalHours": 25,
+      "level": "Intermediate to Advanced",
+      "rating": 4.9,
+      "status": "available",
+      "fee": "Free",
+      "description": "Comprehensive algorithms course covering Big-O analysis, linked lists, trees, graphs, dynamic programming, and interview questions.",
+      "prerequisites": "Proficiency in any programming language (Python, Java, or C++)."
+    },
+    {
+      "id": "html-css-masterclass",
+      "code": "HTML",
+      "title": "HTML & CSS Masterclass",
+      "category": "DEVELOPMENT",
+      "instructor": "Prof. Priya Sharma",
+      "modulesCount": 6,
+      "totalHours": 8,
+      "level": "Beginner",
+      "rating": 4.9,
+      "status": "available",
+      "fee": "Free",
+      "description": "Build modern responsive websites from scratch using semantic HTML5, CSS3 animations, Flexbox, and CSS Grid.",
+      "prerequisites": "No prerequisites. Beginner friendly."
+    }
+  ]
+};
+
+let cachedData = null;
+
+/**
+ * Loads course data from JSON file (or returns static data if fetch fails)
+ */
+export async function loadCoursesData() {
+  if (cachedData) {
+    return cachedData;
+  }
+
+  // Try fetching from data/courses.json or courses.json
+  const candidateUrls = ["data/courses.json", "courses.json", "./data/courses.json", "./courses.json"];
+  
+  for (const url of candidateUrls) {
+    try {
+      const response = await fetch(url);
+      if (response.ok) {
+        const json = await response.json();
+        if (json && json.courses && Array.isArray(json.courses)) {
+          cachedData = json;
+          window.COURSES_DATA = json;
+          return json;
+        }
+      }
+    } catch {
+      // In case of file:// protocol or fetch error, proceed to next candidate or fallback
+    }
+  }
+
+  // Fallback to bundled data
+  cachedData = DEFAULT_COURSES_DATA;
+  window.COURSES_DATA = DEFAULT_COURSES_DATA;
+  return DEFAULT_COURSES_DATA;
+}
+
+/**
+ * Synchronous getter: returns cached or default data immediately
+ */
+export function getCoursesDataSync() {
+  return cachedData || window.COURSES_DATA || DEFAULT_COURSES_DATA;
+}
+
+export function getEnrolledCourses() {
+  const data = getCoursesDataSync();
+  return data.courses || [];
+}
+
+export function getAllCourses() {
+  const data = getCoursesDataSync();
+  const enrolled = data.courses || [];
+  const catalog = data.catalogCourses || [];
+  return [...enrolled, ...catalog];
+}
+
+export function getCourseById(courseId) {
+  if (!courseId) return null;
+  const target = courseId.toLowerCase().trim();
+  const all = getAllCourses();
+  return all.find(c => 
+    c.id.toLowerCase() === target || 
+    c.title.toLowerCase() === target ||
+    c.code?.toLowerCase() === target
+  ) || null;
+}
+
+// Make accessible to non-module scripts as well
+if (typeof window !== "undefined") {
+  window.COURSES_DATA = window.COURSES_DATA || DEFAULT_COURSES_DATA;
+  window.loadCoursesData = loadCoursesData;
+}

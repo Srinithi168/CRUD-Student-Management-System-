@@ -1,0 +1,23 @@
+{
+  "name": "student-management-system",
+  "version": "1.0.0",
+  "description": "A responsive Student Management System frontend built using HTML and CSS.",
+  "main": "script.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Srinithi168/CRUD-Student-Management-System-.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Srinithi168/CRUD-Student-Management-System-/issues"
+  },
+  "homepage": "https://github.com/Srinithi168/CRUD-Student-Management-System-#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
